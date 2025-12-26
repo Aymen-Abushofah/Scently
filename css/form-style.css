@@ -215,11 +215,15 @@ body, .form-bg {
         /* On medium screens, switch to 2 columns */
         grid-template-columns: repeat(2, 1fr);
     }
+
+   .five-cols {
+      grid-template-columns: repeat(2, 1fr);
+   }
 }
 
 @media (max-width: 480px) {
     /* On very small phones, make everything 2 columns for comfortable tapping */
-    .two-cols, .three-cols, .four-cols {
+    .two-cols, .three-cols, .four-cols, .five-cols {
         grid-template-columns: repeat(2, 1fr);
     }
 }
