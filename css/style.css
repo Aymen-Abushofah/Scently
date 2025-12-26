@@ -8,6 +8,7 @@
 
 /* Reset default browser spacing and ensure predictable sizing */
 * {
+    -webkit-tap-highlight-color: transparent;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,10 +27,9 @@ body {
     /* Prevent horizontal overflow caused by transforms/animations */
     overflow-x: hidden;
 
-    /* Animated icy gradient background */
+    /*icy gradient background */
     background: linear-gradient(-45deg, #021024, #052659, #5483B3, #021024);
     background-size: 400% 400%;
-    animation: gradient-animation 25s ease infinite;
 }
 
 /* ==========================================================================
@@ -187,8 +187,8 @@ body {
     transform: translateY(-3px);
     background: rgba(193, 232, 255, 0.2);
     box-shadow:
-    inset 0 0 18px rgba(255,255,255,0.3),
-    0 10px 30px rgba(193,232,255,0.3);
+        inset 0 0 18px rgba(255,255,255,0.3),
+        0 10px 30px rgba(193,232,255,0.3);
 }
 
 /* ==========================================================================
@@ -402,9 +402,6 @@ body {
     color: #ffffff;
     text-decoration: none;
 
-    display: flex;
-    justify-content: center;
-
     margin-top: 1.5rem;
     z-index: 5;
 
@@ -608,26 +605,6 @@ body {
     color: #7DA0CA;
 }
 
-/* The SVG wave separator */
-.footer-wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-    background-color: #C1E8FF; /* Match the lightest color of the body gradient */
-    pointer-events: none;
-}
-.footer-wave svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
-    fill: #021024; /* Match the footer's top color */
-}
-
 /* The main content area of the footer */
 .footer-content {
     max-width: 1200px;
@@ -670,6 +647,7 @@ body {
     flex-wrap: wrap;
     gap: 15px;
 }
+
 .socialContainer {
     width: 52px; height: 52px;
     background: rgba(193,232,255,0.12);
@@ -678,11 +656,18 @@ body {
     border-radius: 16px; transition: all .3s;
 }
 
-.socialContainer:hover { transform: translateY(-5px); box-shadow: 0 0 15px var(--color, #fff); }
-.containerOne:hover { --color: #d62976; background-color: #d62976; }
-.containerTwo:hover { --color: #00acee; background-color: #00acee; }
-.containerThree:hover { --color: #0072b1; background-color: #0072b1; }
-.containerFour:hover { --color: #128C7E; background-color: #128C7E; }
+.socialContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #FFF; 
+}
+
+.containerOne:hover { background-color: #d62976; }
+
+.containerTwo:hover { background-color: #00acee; }
+
+.containerThree:hover { background-color: #0072b1; }
+
+.containerFour:hover { background-color: #128C7E; }
 
 /* Quick Links & Dev List */
 .footer-links, .dev-list {
@@ -691,12 +676,14 @@ body {
     gap: 15px;
     text-align: center;
 }
+
 .footer-links a, .dev-list p {
     color: #7DA0CA;
     text-decoration: none;
     font-size: 1.1em;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
+
 .footer-links a:hover {
     color: #fff;
     text-shadow: 0 0 5px rgba(255,255,255,0.7);
