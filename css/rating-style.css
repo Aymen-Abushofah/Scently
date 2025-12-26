@@ -8,7 +8,12 @@
     --light-blue-1: #7DA0CA; --light-blue-2: #C1E8FF; --gold-color: #FFD700;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { 
+    -webkit-tap-highlight-color: transparent;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
 
 html { scroll-behavior: smooth; }
 
@@ -16,9 +21,8 @@ body {
     font-family: 'Rubik', sans-serif;
     background-color: var(--dark-blue);
     color: var(--light-blue-2);
-    -webkit-font-smoothing: antialiased;
     position: relative;
-    overflow: auto;
+    overflow: hidden;
 }
 
 /* Floating Particles Background */
@@ -26,6 +30,7 @@ body {
     0% { transform: translateY(0); }
     100% { transform: translateY(-100vh); }
 }
+
 .particles-bg {
     position: fixed;
     top: 0;
@@ -49,10 +54,12 @@ body {
     text-align: center;
     margin-bottom: 50px;
 }
+
 .logo {
     font-family: "Great Vibes", cursive; font-size: 50px;
     color: var(--light-blue-2); text-decoration: none; margin-bottom: 20px; display: inline-block;
 }
+
 .page-header h1 {
     font-size: clamp(2.5rem, 6vw, 3.5rem); color: #fff; margin-bottom: 10px;
 }
@@ -125,6 +132,7 @@ body {
     border-radius: 10px;
     padding: 5px;
 }
+
 .item-image img {
     width: 100%;
     height: 100%;
@@ -134,12 +142,14 @@ body {
 .item-info {
     text-align: right;
 }
+
 .item-name {
     font-size: 1.2rem;
     font-weight: 500;
     color: #fff;
     margin-bottom: 5px;
 }
+
 .item-brand {
     font-size: 0.9rem;
     color: var(--light-blue-1);
