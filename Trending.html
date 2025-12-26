@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأكثر رواجاً</title>
+    <link rel="shortcut icon" href="icons/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/rating-style.css">
+</head>
+<body>
+    <!-- Floating Particles Background -->
+    <div class="particles-bg"></div>
+
+    <div class="page-container">
+        <!-- Page Header -->
+        <header class="page-header">
+            <a href="index.html" class="logo">Scently</a>
+            <h1>قائمة الأكثر رواجاً</h1>
+            <p>اكتشف العطور الأكثر رواجاً على مواقع التواصل الإجتماعي.</p>
+        </header>
+
+        <!-- Filter Buttons -->
+       <div class="filter-controls">
+            <!-- The "active" class is now on the "men" button by default -->
+            <button class="filter-btn active" data-filter="men">رجالي</button>
+            <button class="filter-btn" data-filter="women">نسائي</button>
+            <button class="filter-btn" data-filter="unisex">للجنسين</button>
+        </div>
+
+
+       <!-- استبدل هذا القسم بالكامل -->
+<main class="leaderboard-container">
+    <!-- Men's Top 3 -->
+    <div id="men-leaderboard" class="leaderboard active">
+        <a href="Althair.html" class="leaderboard-item" data-category="men">
+            <div class="rank">1</div><div class="item-image"><img src="images/perfumes/male/lthaïr Parfums de Marly.png" alt="..."></div>
+            <div class="item-info"><h3 class="item-name">الثائر</h3><p class="item-brand">بارفومز دي مارلي</p></div>
+            <div class="item-rating"><span>4.4</span><span class="star">★</span></div>
+        </a>
+        <a href="Sauvage Elixir.html" class="leaderboard-item" data-category="men">
+            <div class="rank">2</div><div class="item-image"><img src="images/perfumes/male/Sauvage Elixir Dior.png" alt="..."></div>
+            <div class="item-info"><h3 class="item-name">سوفاج إليكسير</h3><p class="item-brand">ديور</p></div>
+            <div class="item-rating"><span>4.3</span><span class="star">★</span></div>
+        </a>
+        <a href="Imagination.html" class="leaderboard-item" data-category="men">
+            <div class="rank">3</div><div class="item-image"><img src="images/perfumes/male/Imagination Louis Vuitton.png" alt="..."></div>
+            <div class="item-info"><h3 class="item-name">إماجينيشن</h3><p class="item-brand">لوي فيتون</p></div>
+            <div class="item-rating"><span>4.6</span><span class="star">★</span></div>
+        </a>
+    </div>
+
+    <!-- Women's Top 3 -->
+    <div id="women-leaderboard" class="leaderboard">
+        <a href="Good Girl.html" class="leaderboard-item" data-category="women">
+            <div class="rank">1</div><div class="item-image"><img src="images/perfumes/female/Good Girl Carolina Herrera.png" alt="..."></div>
+            <div class="item-info"><h3 class="item-name">جود جيرل</h3><p class="item-brand">كارولينا هيريرا</p></div>
+            <div class="item-rating"><span>4.0</span><span class="star">★</span></div>
+        </a>
+        <a href="Miss Dior.html" class="leaderboard-item" data-category="women">
+            <div class="rank">2</div><div class="item-image"><img src="images/perfumes/female/Miss Dior Parfum (2024) Dior.png" alt="..."></div>
+            <div class="item-info"><h3 class="item-name">ميس ديور</h3><p class="item-brand">ديور</p></div>
+            <div class="item-rating"><span>4.0</span><span class="star">★</span></div>
+        </a>
+        <a href="My Way.html" class="leaderboard-item" data-category="women">
+            <div class="rank">3</div><div class="item-image"><img src="images/perfumes/female/My Way Giorgio Armani.png" alt="..."></div>
+            <div class="item-info"><h3 class="item-name">ماي واي</h3><p class="item-brand">جورجيو أرماني</p></div>
+            <div class="item-rating"><span>3.8</span><span class="star">★</span></div>
+        </a>
+    </div>
+
+    <!-- Unisex Top 3 -->
+    <div id="unisex-leaderboard" class="leaderboard">
+        <a href="Side Effect.html" class="leaderboard-item" data-category="unisex">
+            <div class="rank">1</div><div class="item-image"><img src="images/perfumes/unisex/Side Effect Initio Parfums Prives.png" alt="..."></div>
+            <div class="item-info"><h3 class="item-name">سايد إيفكت</h3><p class="item-brand">إينيشيو</p></div>
+            <div class="item-rating"><span>4.3</span><span class="star">★</span></div>
+        </a>
+        <a href="Oajan.html" class="leaderboard-item" data-category="unisex">
+            <div class="rank">2</div><div class="item-image"><img src="images/perfumes/unisex/Oajan Parfums de Marly.png" alt="..."></div>
+            <div class="item-info"><h3 class="item-name">أوجان</h3><p class="item-brand">بارفومز دي مارلي</p></div>
+            <div class="item-rating"><span>4.4</span><span class="star">★</span></div>
+        </a>
+        <a href="Erba Pura.html" class="leaderboard-item" data-category="unisex">
+            <div class="rank">3</div><div class="item-image"><img src="images/perfumes/unisex/Erba Pura Xerjoff.png" alt="..."></div>
+            <div class="item-info"><h3 class="item-name">إربا بورا</h3><p class="item-brand">زيرجوف</p></div>
+            <div class="item-rating"><span>3.8</span><span class="star">★</span></div>
+        </a>
+    </div>
+</main>
+
+    </div>
+
+    <!-- Link to your JavaScript file -->
+    <script src="js/rating.js" defer></script>
+</body>
+</html>

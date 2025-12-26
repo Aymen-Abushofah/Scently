@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية</title>
+    <link rel="shortcut icon" href="icons/favicon.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-------------------------------------------------------------------------------------------------------------
+-----------------------------------------        Hero Section        ------------------------------------------
+--------------------------------------------------------------------------------------------------------------->
+
+<div class="hero-section">
+
+    <!-- Navigation Bar -->
+    <div class="nav">
+
+        <!-- Left Column (Logo) -->
+        <div class="nav-left">
+            <a href="index.html" class="logo">Scently</a>
+        </div>
+
+        <!-- Center Column (Desktop Links) -->
+        <div class="nav-center">
+            <div class="nav-links">
+                <a href="#"><button class="holo-btn">الرئيسية</button></a>
+                <a href="fragrances.html"><button class="holo-btn">قائمة العطور</button></a>
+                <a href="dupes.html"><button class="holo-btn">قائمة البدائل</button></a>
+                <a href="#recommendations"><button class="holo-btn">يوصى به</button></a>
+            </div>
+        </div>
+
+        <!-- Right Column (Desktop Button & Mobile Hamburger) -->
+        <div class="nav-right">
+            <div class="nav-buttons">
+                <button onclick="window.location.href='sign-up.html'">تسجيل دخول</button>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+
+        <!-- The Mobile Dropdown Menu (hidden on desktop) -->
+        <div class="nav-mobile-menu">
+            <a href="index.html"><button class="holo-btn">الرئيسية</button></a>
+            <a href="fragrances.html"><button class="holo-btn">قائمة العطور</button></a>
+            <a href="dupes.html"><button class="holo-btn">قائمة البدائل</button></a>
+            <a href="#recommendations"><button class="holo-btn">يوصى به</button></a>
+            <button class="mobile-signin-btn" onclick="window.location.href='sign-up.html'">تسجيل دخول</button>
+        </div>
+
+    </div>
+
+    <!-- Slogan Section -->
+    <div class="slogan">
+        <h1>عطر يروي قصتك ... اكتشف رائحتك المميزة</h1>
+        <h2>دليلك لعالم العطور: اكتشف، جرّب، وتميّز</h2>
+    </div>
+
+    <!-- Search Bar Section-->
+    <div class="search-bar-container">
+
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        <input type="search" class="search-input" id="global-search-input" placeholder="...ابحث عن عطر">
+        
+        <!-- dynamic dropdown for results -->
+        <div class="search-results-dropdown" id="search-results"></div>
+    </div>
+
+      <a href="form.html" class="help-me">
+        ساعدني في الإختيار
+      </a>
+
+    <img src="images/Bleu_Chanel.png" class="hero-pic">
+    <img src="images/Layton.PNG" class="hero-pic2">
+        
+</div>
+
+<!-------------------------------------------------------------------------------------------------------------
+------------------------------------        Recommendation Section        -------------------------------------
+--------------------------------------------------------------------------------------------------------------->
+
+<section class="recommendations-section">
+
+    <div class="cards-header">
+        <h2 id="recommendations">اكتشف توصياتنا</h2>
+    </div>
+
+    <div class="cards-grid">
+
+        <!-- Card 1: Trending -->
+        <a href="trending.html" class="rec-card">
+            <div class="card-background">
+                <img src="images/trending.jpg" alt="Trending fragrances">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">الأكثر رواجاً</h3>
+                <p class="card-description">استكشف العطور التي تتصدر المشهد الآن.</p>
+                <span class="card-button">عرض القائمة</span>
+            </div>
+        </a>
+
+        <!-- Card 2: Top Rated -->
+        <a href="top-rated.html" class="rec-card">
+            <div class="card-background">
+                <img src="images/Layton-bg.jpg" alt="Top rated fragrances">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">الأعلى تقييماً</h3>
+                <p class="card-description">شاهد العطور التي حازت على أعلى التقييمات.</p>
+                <span class="card-button">عرض القائمة</span>
+            </div>
+        </a>
+
+        <!-- Card 3: Best Dupes -->
+        <a href="best-dupes.html" class="rec-card">
+            <div class="card-background">
+                <img src="images/top-dupes.png" alt="Best fragrance dupes">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">أفضل البدائل</h3>
+                <p class="card-description">اكتشف بدائل عالية الجودة بأسعار معقولة.</p>
+                <span class="card-button">عرض القائمة</span>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<!-------------------------------------------------------------------------------------------------------------
+----------------------------------------        Footer Section        -----------------------------------------
+--------------------------------------------------------------------------------------------------------------->
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <!-- About-Us Section -->
+        <div class="about-us">
+            <h2>من نـحن؟</h2>
+            <p>نحن موقع تعريفي متخصص في عالم العطور، نهدف إلى تقديم معلومات دقيقة ومبسطة عن أشهر العطور العالمية، مكوناتها، وروائحها، لمساعدة الزوار على اختيار العطر الذي يناسب ذوقهم وشخصيتهم.</p>
+            <hr class="f-seperator">
+        </div>
+
+        <div class="footer-grid">
+
+            <!-- Middle Section: Contact -->
+            <div class="footer-column">
+                <h3>تواصل معنا</h3>
+                <div class="social-card">
+                    <a href="#" class="socialContainer containerOne"><img src="icons/instagram.png" alt=""></a>
+                    <a href="#" class="socialContainer containerTwo"> <img src="icons/twitter.png" alt=""></a>
+                    <a href="#" class="socialContainer containerThree"><img src="icons/facebook-square.png" alt=""></a>
+                    <a href="#" class="socialContainer containerFour"><img src="icons/whatsapp.png" alt=""></a>
+                </div>
+            </div>
+
+            <!-- Right Section: Quick Links -->
+            <div class="footer-column">
+                <h3>الانتقال السريع</h3>
+                <div class="footer-links">
+                    <a href="index.html">الرئيسية</a>
+                    <a href="fragrances.html">قائمة العطور</a>
+                    <a href="dupes.html">قائمة البدائل</a>
+                    <a href="#recommendations">يوصى به</a>
+                </div>
+            </div>
+
+            <!-- Left Section: Developers -->
+            <div class="footer-column">
+                <h3>المطورون</h3>
+                <div class="dev-list">
+                    <p>أيمن أحمد أبـوشوفة</p>
+                    <p>مصعب سالم بشارة</p>
+                    <p>منذر عبد الله خليفة</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section: Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Scently. جميع الحقوق محفوظة.</p>
+        </div>
+
+    </div>
+</footer>
+
+
+    <!-- Link to JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

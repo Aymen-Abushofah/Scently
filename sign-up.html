@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>تسجيل حساب</title>
+  <link rel="shortcut icon" href="icons/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/sign-up-style.css">
+</head>
+<body>
+
+<div class="signup-wrapper">
+  <div class="card-container">
+    <div class="glass-card card-front">
+      <h1>إنشاء حساب</h1>
+      <p>اكتشف رائحتك المميزة وانغمس في عالم العطور</p>
+
+      <form>
+        <input type="text" placeholder="الاسم الكامل" required>
+        <input type="email" placeholder="البريد الإلكتروني" required>
+        <input type="password" placeholder="كلمة المرور" required>
+
+        <button type="button" class="flip-btn">إنشاء حساب</button>
+      </form>
+
+      <span class="footer-text">
+        لديك حساب؟ <a href="#" class="flip-btn">تسجيل دخول</a>
+      </span>
+    </div>
+
+    <div class="glass-card card-back">
+      <h1>تسجيل دخول</h1>
+      <p>مرحبًا بك! أدخل بياناتك للاستمرار</p>
+
+      <form>
+        <input type="email" placeholder="البريد الإلكتروني" required>
+        <input type="password" placeholder="كلمة المرور" required>
+
+        <button type="button" onclick="window.location.href='index.html'">تسجيل دخول</button>
+      </form>
+
+      <span class="footer-text">
+        لا تملك حساب؟ <a href="#" class="flip-btn">إنشاء حساب</a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

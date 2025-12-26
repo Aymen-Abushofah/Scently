@@ -1,0 +1,225 @@
+/* ==========================================================================
+   Static Helper Form Page Styles
+   ========================================================================== */
+
+/* Define CSS Variables */
+:root {
+    --dark-blue: #021024; --mid-blue-1: #052659; --mid-blue-2: #5483B3;
+    --light-blue-1: #7DA0CA; --light-blue-2: #C1E8FF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body, .form-bg {
+    font-family: 'Rubik', sans-serif;
+    background: linear-gradient( to bottom, var(--dark-blue) 5%, var(--mid-blue-1), var(--mid-blue-2) );
+    color: var(--light-blue-2);
+    -webkit-font-smoothing: antialiased;
+}
+
+.form-bg {
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+.logo {
+    font-family: "Great Vibes", cursive;
+    font-size: 50px;
+    color: var(--light-blue-2);
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.page-header h1 {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    color: #fff;
+    margin-bottom: 10px;
+}
+.page-header p {
+    font-size: 1.1rem;
+    color: var(--light-blue-1);
+}
+
+/* The main glassmorphism container */
+.form-container {
+    width: 100%;
+    max-width: 900px; /* Wider container */
+    margin: 0 auto;
+    background: rgba(12, 45, 97, 0.5);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(193, 232, 255, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* Each question block */
+.question-block {
+    margin-bottom: 20px;
+}
+
+.question-block h2 {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+/* The separator between questions */
+.question-separator {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to left, transparent, var(--mid-blue-2), transparent);
+    margin: 40px 0;
+}
+
+/* ==========================================================================
+   THE DEFINITIVE Options Grid with Perfect Centering
+   ========================================================================== */
+
+/* The grid that holds the option cards */
+.options-grid {
+    display: grid;
+    gap: 20px;
+    
+    /* THE FIX:
+       - We define the columns explicitly.
+       - 'justify-items: center' will center the content INSIDE each grid cell.
+    */
+    justify-items: center;
+}
+
+/* Specific column counts for each question group */
+.two-cols {
+    /* Create 2 columns, each taking an equal fraction of the space */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.three-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.four-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* --- أضف هذه القاعدة الجديدة --- */
+.five-cols { grid-template-columns: repeat(5, 1fr); }
+
+
+/* The option card itself */
+.option-card {
+    /* Make the card take the full width of its grid cell */
+    width: 100%;
+    max-width: 250px; /* But don't let it get too wide on large screens */
+    
+    background: rgba(193, 232, 255, 0.1);
+    border: 1px solid rgba(193, 232, 255, 0.3);
+    border-radius: 15px;
+    padding: 25px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+}
+
+
+
+
+.option-card {
+    background: rgba(193, 232, 255, 0.1);
+    border: 1px solid rgba(193, 232, 255, 0.3);
+    border-radius: 15px;
+    padding: 25px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+}
+.option-card img {
+    height: 48px;
+    margin-bottom: 15px;
+}
+.option-card span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.option-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    background: rgba(193, 232, 255, 0.2);
+    box-shadow: 0 0 20px rgba(193, 232, 255, 0.4);
+    border-color: var(--light-blue-1);
+}
+
+/* Submit Button */
+.submit-container {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(193, 232, 255, 0.2);
+}
+.submit-btn {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 15px 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--light-blue-1);
+    color: var(--dark-blue);
+    border: none;
+    box-shadow: 0 0 20px var(--light-blue-1);
+}
+.submit-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px var(--light-blue-1);
+}
+
+/* --- NEW: Style for the selected option card --- */
+.option-card.selected {
+    background: var(--light-blue-1);
+    color: var(--dark-blue);
+    border-color: #fff;
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 0 25px var(--light-blue-1);
+}
+
+.option-card.selected img {
+    filter: invert(1) brightness(0.5);
+}
+
+/* --- Responsiveness for the grid --- */
+@media (max-width: 768px) {
+    .three-cols {
+        /* On medium screens, maybe 3 columns is too much */
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .four-cols {
+        /* On medium screens, switch to 2 columns */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    /* On very small phones, make everything 2 columns for comfortable tapping */
+    .two-cols, .three-cols, .four-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,694 @@
+/* ==========================================================================
+   Global Styles & Fonts
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: linear-gradient( to bottom, #021024 20%, #052659 100% );
+    color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   1. Top Bar
+   ========================================================================== */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(2, 16, 36, 0.3);
+    border-bottom: 1px solid rgba(84, 131, 179, 0.2);
+    position: sticky; top: 0; z-index: 100;
+}
+.logo{
+    text-decoration: none;
+  display: flex;
+  font-family: "Great Vibes", cursive;
+  font-weight: 500;
+  font-size: 40px;
+  font-style: normal;
+  color: #c1e8ff;
+  align-self: center;
+  transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+  color: #ffffff;
+  text-shadow:
+    0 0 6px rgba(193,232,255,0.8),
+    0 0 18px rgba(193,232,255,0.5),
+    0 0 32px rgba(0,180,255,0.35);
+}
+/* ==========================================================================
+   NEW: Enhanced & Beautiful Search Bar
+   ========================================================================== */
+
+/* The main container for the search bar */
+.search-bar-container {
+    position: relative;
+    width: 350px; /* Give it a slightly larger default width */
+    display: flex;
+    align-items: center;
+}
+
+/* The search icon styling */
+.search-icon {
+    position: absolute;
+    right: 20px; /* Position inside from the right (for RTL) */
+    width: 20px;
+    height: 20px;
+    color: #5483B3;
+    pointer-events: none; /* Make it non-interactive */
+    transition: all 0.3s ease;
+}
+
+.search-bar-container { position: relative; width: 350px; display: flex; align-items: center; }
+.search-icon {
+    position: absolute; right: 20px; width: 20px; height: 20px;
+    color: #5483B3; pointer-events: none; transition: all 0.3s ease;
+}
+.search-input {
+    width: 100%; height: 50px; padding: 12px 60px 12px 20px; border-radius: 50px;
+    border: 1px solid #5483B3; background: rgba(5, 38, 89, 0.6);
+    color: #FFFFFF; font-size: 1rem; font-family: 'Rubik', sans-serif; outline: none; transition: all 0.3s ease;
+}
+.search-input::placeholder { color: #7DA0CA; opacity: 0.8; }
+.search-input:focus {
+    border-color: #7DA0CA;
+    box-shadow: 0 0 8px #7DA0CA, 0 0 15px #7DA0CA;
+}
+.search-input:focus + .search-icon { color: #7DA0CA; transform: scale(1.1); }
+.search-results-dropdown {
+    position: absolute; top: calc(100% + 10px); left: 0; width: 100%;
+    background: rgba(12, 45, 97, 0.9); backdrop-filter: blur(10px);
+    border: 1px solid #5483B3; border-radius: 15px; max-height: 300px;
+    overflow-y: auto; z-index: 1000; opacity: 0; visibility: hidden;
+    transform: translateY(-10px); transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+.search-results-dropdown.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.result-item {
+    display: flex; align-items: center; gap: 15px; padding: 10px;
+    transition: background-color 0.2s ease; text-decoration: none;
+}
+.result-item:hover { background-color: #7DA0CA; }
+.result-image {
+    width: 40px; height: 40px; object-fit: contain; border-radius: 8px;
+    background-color: #fff; flex-shrink: 0;
+}
+.result-name {
+    color: #7DA0CA; font-size: 1rem; font-weight: 500;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.result-item:hover .result-name { color: #021024; }
+.no-results-item { padding: 20px; text-align: center; color: #5483B3; font-style: italic; }
+
+/* ==========================================================================
+   NEW: Enhanced Search Result Item Styles (with Images)
+   ========================================================================== */
+
+/* Update the result item to be a flex container */
+.result-item {
+    display: flex;
+    align-items: center; /* Vertically center the image and text */
+    gap: 15px; /* Space between image and text */
+    padding: 10px; /* Adjust padding */
+    transition: background-color 0.2s ease;
+}
+
+/* Styling for the small image in the result */
+.result-image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain; /* Ensure the whole image is visible */
+    border-radius: 8px; /* Slightly rounded corners */
+    background-color: #fff; /* White background for better visibility */
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+/* Styling for the fragrance name */
+.result-name {
+    color: #7DA0CA;
+    font-size: 1rem;
+    font-weight: 500;
+    /* Ensure long names don't break the layout */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Change name color on hover for better feedback */
+.result-item:hover .result-name {
+    color: #021024;
+}
+
+
+/* The message shown when there are no results */
+.no-results-item {
+    padding: 20px;
+    text-align: center;
+    color: #5483B3;
+    font-style: italic;
+    cursor: default;
+}
+
+
+/* ==========================================================================
+   2. Title Section & Like Button
+   ========================================================================== */
+.title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+.title-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.fragrance-category {
+    font-size: 1.2rem;
+    color: #7DA0CA;
+    background: rgba(5, 38, 89, 0.5);
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+/* Your Like Button CSS */
+.heart-container{--heart-color:rgb(255,91,137);position:relative;width:50px;height:50px;transition:.3s}.heart-container .checkbox{position:absolute;width:100%;height:100%;opacity:0;z-index:20;cursor:pointer}.heart-container .svg-container{width:100%;height:100%;display:flex;justify-content:center;align-items:center}.heart-container .svg-outline,.heart-container .svg-filled{fill:var(--heart-color);position:absolute}.heart-container .svg-filled{animation:keyframes-svg-filled 1s;display:none}.heart-container .svg-celebrate{position:absolute;animation:keyframes-svg-celebrate .5s;animation-fill-mode:forwards;display:none;stroke:var(--heart-color);fill:var(--heart-color);stroke-width:2px}.heart-container .checkbox:checked~.svg-container .svg-filled{display:block}.heart-container .checkbox:checked~.svg-container .svg-celebrate{display:block}@keyframes keyframes-svg-filled{0%{transform:scale(0)}25%{transform:scale(1.2)}50%{transform:scale(1);filter:brightness(1.5)}}@keyframes keyframes-svg-celebrate{0%{transform:scale(0)}50%{opacity:1;filter:brightness(1.5)}100%{transform:scale(1.4);opacity:0;display:none}}
+
+/* ==========================================================================
+   3. Main Data Section (Image, Notes, Occasions)
+   ========================================================================== */
+.main-data-section {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+.right-side, .left-side {
+    width: 50%;
+}
+
+.fragrance-image-container {
+    width: 100%;
+    /* --- THE FIX: Set a specific height to match the content on the left --- */
+    /* This value is calculated based on the approximate height of the left column's content */
+    height: 596px; 
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
+    /* Added to perfectly center the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.fragrance-image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* This remains crucial */
+}
+.fragrance-main-rating {
+    display: flex; align-items: baseline; gap: 15px;
+    background: rgba(0,0,0,0.2);
+    padding: 20px; margin-top: 20px; border-radius: 15px;
+    margin-bottom: 15px;
+}
+.rating-score { font-size: 2rem; font-weight: 700; }
+.rating-stars { font-size: 1.5rem; color: #FFD700; }
+.rating-count { font-size: 1rem; color: #7DA0CA; }
+
+.brand-logo-container {
+    display: flex; justify-content: center; align-items: center;
+    background: rgba(0,0,0,0.2);
+    padding: 20px; border-radius: 15px;
+    height: 150px; margin-bottom: 20px;
+}
+.brand-logo-container img {
+  max-height: 80%;
+  max-width: 80%;
+  object-fit: contain;
+  border-radius: 7px; 
+}
+
+/* ==========================================================================
+   THE NEW, WIDER & MORE AESTHETIC MAIN NOTES SLIDER
+   ========================================================================== */
+
+.main-notes-container { 
+    padding: 25px; /* More padding */
+    background: rgba(0,0,0,0.2); 
+    border-radius: 15px; 
+    margin-bottom: 20px; 
+}
+.main-notes-container h3 { 
+    font-size: 1.5rem; 
+    margin-bottom: 25px; 
+    border-bottom: 1px solid #5483B3; 
+    padding-bottom: 15px; /* More padding */
+}
+
+/* New: A grid layout for the sliders */
+.notes-grid-sliders {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column */
+    gap: 20px; /* Space between sliders */
+}
+
+.note-slider { 
+    width: 100%;
+}
+
+/* The background track of the slider */
+.slider-track {
+    width: 100%; 
+    height: 35px; /* WIDER */
+    background: rgba(0,0,0,0.4); 
+    border-radius: 8px; /* Slightly less rounded */
+    position: relative;
+    overflow: hidden;
+}
+
+/* The new "filled" progress bar */
+/* The new "filled" progress bar with NEON GLOW */
+.slider-fill {
+    position: absolute;
+    top: 0;
+    right: 0; /* For RTL */
+    height: 100%;
+    background-color: var(--color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    white-space: nowrap;
+    
+    /* --- THE NEON FIX --- */
+    /* A multi-layered shadow to create a realistic glow effect */
+    box-shadow: 
+        0 0 5px var(--color), 
+        0 0 10px var(--color), 
+        0 0 15px rgba(255, 255, 255, 0.2), /* A subtle white outer glow */
+        inset 0 0 4px rgba(255, 255, 255, 0.5); /* A bright inner highlight */
+    
+    width: var(--percentage);
+    animation: fill-in-rtl 1.2s cubic-bezier(0.25, 1, 0.5, 1) 0.2s forwards;
+}
+
+
+/* The text inside the filled bar */
+.note-name { 
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1f1f1f;
+    /* Add a subtle shadow to make text pop */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* The RTL animation for the fill effect */
+@keyframes fill-in-rtl {
+    from {
+        width: 0%;
+    }
+    to {
+        width: var(--percentage);
+    }
+}
+
+.occasions-container {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 15px; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 15px;
+}
+.occasion-item { text-align: center; }
+.icon-wrapper {
+    width: 60px; height: 60px; margin: 0 auto 10px auto;
+    border-radius: 50%; display: flex; justify-content: center; align-items: center;
+    background: rgba(0,0,0,0.3);
+}
+.icon-wrapper img { width: 32px; height: 32px; filter: grayscale(1) brightness(0.7); }
+/* Icon Colors */
+.icon-wrapper.high { background: #5483B3; box-shadow: 0 0 15px #5483B3; }
+.icon-wrapper.high img { filter: none; }
+.icon-wrapper.medium { background: #052659; }
+.icon-wrapper.medium img { filter: grayscale(0.5) brightness(0.9); }
+
+/* ==========================================================================
+   THE DEFINITIVE Performance & Occasions Section (Corrected)
+   ========================================================================== */
+
+/* The main wrapper holding both boxes */
+.stats-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: stretch; /* Makes both boxes equal height */
+}
+
+/* Common styles for both boxes */
+.occasions-container,
+.performance-container {
+    flex: 1; /* Each takes 50% of the space */
+    background: rgba(0,0,0,0.2);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+/* Grid for the occasion icons */
+.occasions-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 20px;
+    align-content: center;
+}
+
+/* 1. THE FIX: This container now arranges its items (the two performance items) side-by-side */
+.performance-container {
+    display: flex;
+    flex-direction: row; /* Arrange Sillage & Longevity side-by-side */
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* 2. THE FIX: This container stacks its OWN children (circle + label) vertically */
+.performance-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* --- Styles for the content INSIDE the items (no changes needed here) --- */
+.circular-progress {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: conic-gradient(
+        var(--color) calc(var(--value) * 1%), 
+        rgba(0,0,0,0.4) 0
+    );
+    box-shadow: 
+        0 0 10px var(--color),
+        0 0 20px rgba(0,0,0,0.5);
+}
+.circular-progress::before {
+    content: '';
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    background: #1e3a5f;
+    border-radius: 50%;
+}
+.progress-value {
+    position: relative;
+    z-index: 1;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+.performance-label {
+    font-size: 0.95rem;
+    color: #7DA0CA;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) { /* Changed to a more standard breakpoint */
+    .stats-wrapper {
+        flex-direction: column; /* Stack the boxes on mobile */
+    }
+}
+
+
+
+/* ==========================================================================
+   4. Separator & Description
+   ========================================================================== */
+.section-separator {
+    border: none; height: 1px;
+    background: linear-gradient(to left, transparent, #5483B3, transparent);
+    margin: 60px 0;
+}
+.description-section {
+    display: flex; gap: 40px; align-items: flex-start;
+}
+.description-section p { width: 60%; font-size: 1.1rem; line-height: 1.8; color: #7DA0CA; }
+.perfumer-details { width: 40%; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 15px; line-height: 1.7; }
+/* ==========================================================================
+   THE DEFINITIVE NOTES BREAKDOWN SECTION (with corrected spacing)
+   ========================================================================== */
+
+.notes-breakdown {
+    margin-top: 0; /* The separator will now handle the top margin */
+}
+
+/* This is the container for a single group (e.g., Top Notes) */
+.notes-group {
+    /* 3. THE FIX: Add a large bottom margin to space out the groups */
+    margin-bottom: 50px;
+}
+.notes-group:last-child {
+    margin-bottom: 0; /* Remove margin from the last group */
+}
+
+.notes-group h3 {
+    font-size: 1.8rem;
+    margin-bottom: 25px; /* Increase space between header and notes grid */
+    border-bottom: 1px solid #5483B3;
+    padding-bottom: 10px;
+}
+
+/* The grid that holds all the note items */
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 25px;
+}
+
+/* The container for a SINGLE note item (image + name) */
+.note-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* The styled container for the image */
+.note-image-container {
+    width: 90px;
+    height: 90px;
+    /* 2. THE FIX: Reduce the space between the image and its name */
+    margin-bottom: 10px; 
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.note-item:hover .note-image-container {
+    background-color: rgba(5, 38, 89, 0.7);
+}
+
+/* The image itself */
+.note-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* The name text under the image */
+.note-item-name {
+    font-size: 0.95rem;
+    color: #7DA0CA;
+    font-weight: 500;
+}
+
+
+
+/* ==========================================================================
+   NEW: Enhanced Description Section Styles
+   ========================================================================== */
+
+/* This now acts as a wrapper for both columns */
+.description-section {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* The left column containing the text paragraph */
+.description-content {
+    width: 60%; /* Takes up more space */
+}
+
+.intro-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #7DA0CA;
+}
+
+/* The right column, styled as a "Quick Facts" box */
+.perfumer-details {
+    width: 40%;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 25px;
+    border-right: 4px solid #5483B3; /* Accent line */
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column; /* Stack label and value vertically */
+    align-items: flex-start;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+.meta-item:last-child {
+    margin-bottom: 0;
+}
+
+.meta-item strong {
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 5px; /* Space between label and value */
+}
+
+.meta-item span {
+    color: #7DA0CA;
+}
+
+/* ==========================================================================
+   NEW: Dupes Section Styles
+   ========================================================================== */
+
+.dupes-section {
+    padding: 20px 0;
+}
+
+.dupes-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #C1E8FF;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* The grid that holds all the dupe cards */
+.dupes-grid {
+    display: grid;
+    /* On desktop, show up to 4 cards per row */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+/* The link that wraps the entire card */
+.dupe-card {
+    display: block;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(84, 131, 179, 0.2);
+}
+
+.dupe-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-color: #5483B3;
+}
+
+/* Container for the dupe's image */
+.dupe-image-container {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Keep images square */
+    background-color: #fff; /* White background for the image */
+}
+
+.dupe-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure the whole bottle is visible */
+    padding: 10px;
+}
+
+/* Container for the text info */
+.dupe-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.dupe-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+    /* Truncate long names with an ellipsis */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dupe-brand {
+    font-size: 0.9rem;
+    color: #7DA0CA;
+}
+
+/* --- Responsiveness for Dupes Section --- */
+@media (max-width: 768px) {
+    .dupes-grid {
+        /* On mobile, show 2 cards per row for a nice balance */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+
+/* --- Responsiveness for this section --- */
+@media (max-width: 768px) {
+    .description-section {
+        flex-direction: column; /* Stack columns on mobile */
+    }
+    .description-content,
+    .perfumer-details {
+        width: 100%; /* Make both full width on mobile */
+    }
+}
+
+
+/* ==========================================================================
+   Responsiveness
+   ========================================================================== */
+@media (max-width: 992px) {
+    .main-data-section { flex-direction: column; }
+    .right-side, .left-side { width: 100%; }
+    .title-section h1 { font-size: 2.5rem; }
+}
+@media (max-width: 768px) {
+    .description-section { flex-direction: column; }
+    .description-section p, .perfumer-details { width: 100%; }
+    .top-bar { padding: 15px 20px; }
+    .search-bar-container { width: 250px; }
+}

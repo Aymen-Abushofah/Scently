@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مساعد الإختيار</title>
+    <link rel="shortcut icon" href="icons/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/form-style.css">
+</head>
+<body>
+    <div class="form-bg">
+        <div class="page-header">
+          <a href="index.html" class="logo">Scently</a>
+            <h1>مساعد الإختيار</h1>
+            <p>أجب على الأسئلة التالية لنقترح لك العطر المثالي.</p>
+        </div>
+
+        <!-- استبدل هذا القسم بالكامل -->
+<form class="form-container" id="selection-form" action="fragrances.html">
+    <!-- Question 1: Gender -->
+    <div class="question-block">
+        <h2>لمن تبحث عن العطر؟</h2>
+        <div class="options-grid two-cols">
+            <div class="option-card" data-name="gender" data-value="male"><img src="icons/man.png" alt="Male"><span>رجالي</span></div>
+            <div class="option-card" data-name="gender" data-value="female"><img src="icons/woman.png" alt="Female"><span>نسائي</span></div>
+        </div>
+    </div>
+    <hr class="question-separator">
+
+    <!-- Question 2: Occasion -->
+    <div class="question-block">
+        <h2>لأي مناسبة؟</h2>
+        <div class="options-grid two-cols">
+            <div class="option-card" data-name="occasion" data-value="day"><img src="icons/day.png" alt="Day"><span>للنهار</span></div>
+            <div class="option-card" data-name="occasion" data-value="night"><img src="icons/night.png" alt="Night"><span>لليل</span></div>
+        </div>
+    </div>
+    <hr class="question-separator">
+
+    <!-- Question 3: Season -->
+    <div class="question-block">
+        <h2>في أي فصل؟</h2>
+        <div class="options-grid four-cols">
+            <div class="option-card" data-name="season" data-value="winter"><img src="icons/winter.png" alt="Winter"><span>الشتاء</span></div>
+            <div class="option-card" data-name="season" data-value="spring"><img src="icons/spring.png" alt="Spring"><span>الربيع</span></div>
+            <div class="option-card" data-name="season" data-value="summer"><img src="icons/summer.png" alt="Summer"><span>الصيف</span></div>
+            <div class="option-card" data-name="season" data-value="autumn"><img src="icons/autumn.png" alt="Autumn"><span>الخريف</span></div>
+        </div>
+    </div>
+    <hr class="question-separator">
+
+    <!-- NEW Question 4: Intensity -->
+    <div class="question-block">
+        <h2>ما هي قوة العطر التي تفضلها؟</h2>
+        <div class="options-grid three-cols">
+            <div class="option-card" data-name="intensity" data-value="subtle"><span>خفيف وقريب</span></div>
+            <div class="option-card" data-name="intensity" data-value="moderate"><span>متوسط وملاحظ</span></div>
+            <div class="option-card" data-name="intensity" data-value="strong"><span>قوي وفواح</span></div>
+        </div>
+    </div>
+    <hr class="question-separator">
+
+    <!-- NEW Question 5: Scent Family -->
+    <div class="question-block">
+        <h2>أي عائلة عطرية تجذبك أكثر؟</h2>
+        <div class="options-grid five-cols">
+            <div class="option-card" data-name="family" data-value="fresh"><img src="icons/fresh.png" alt="Fresh"><span>منعش</span></div>
+            <div class="option-card" data-name="family" data-value="woody"><img src="icons/woody.png" alt="Woody"><span>خشبي</span></div>
+            <div class="option-card" data-name="family" data-value="floral"><img src="icons/flower.png" alt="Floral"><span>زهري</span></div>
+            <div class="option-card" data-name="family" data-value="spicy"><img src="icons/spicy.png" alt="Spicy"><span>تابلي</span></div>
+            <div class="option-card" data-name="family" data-value="sweet"><img src="icons/sweet.png" alt="Sweet"><span>حلو</span></div>
+        </div>
+    </div>
+    <hr class="question-separator">
+    
+    <!-- NEW Question 6: Personality -->
+    <div class="question-block">
+        <h2>ما هي الشخصية التي ترغب في إبرازها؟</h2>
+        <div class="options-grid two-cols">
+            <div class="option-card" data-name="personality" data-value="confident"><span>واثق وجريء</span></div>
+            <div class="option-card" data-name="personality" data-value="romantic"><span>رومانسي وساحر</span></div>
+            <div class="option-card" data-name="personality" data-value="mysterious"><span>غامض وجذاب</span></div>
+            <div class="option-card" data-name="personality" data-value="casual"><span>يومي ومريح</span></div>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="submit-container">
+        <button type="submit" class="submit-btn">اعرض النتائج</button>
+    </div>
+</form>
+
+    </div>
+
+    <script src="js/form-script.js"></script>
+</body>
+</html>
