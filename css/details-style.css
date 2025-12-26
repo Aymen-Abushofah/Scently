@@ -5,6 +5,7 @@
 
 
 * {
+    -webkit-tap-highlight-color: transparent;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -206,7 +207,7 @@ body {
 
 .fragrance-image-container {
     width: 100%;
-    /* --- THE FIX: Set a specific height to match the content on the left --- */
+    /* --- Set a specific height to match the content on the left --- */
     /* This value is calculated based on the approximate height of the left column's content */
     height: 596px; 
     border-radius: 20px;
