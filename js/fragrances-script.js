@@ -28,6 +28,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /* =====================================================
+       DROPDOWN MENU LOGIC
+       Handles opening / closing of the filter dropdown
+       ===================================================== */
+
+    const dropdown = document.querySelector('.dropdown');
+
+    if (dropdown) {
+        const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+
+        // Toggle dropdown visibility when clicking the toggle button
+        dropdownToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevents immediate close by window click
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Close dropdown when any option inside is clicked
+        dropdownMenu.addEventListener('click', () => {
+            dropdownMenu.classList.remove('show');
+        });
+    }
+
+    // Close dropdown when clicking anywhere else on the page
+    window.addEventListener('click', () => {
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        if (dropdownMenu?.classList.contains('show')) {
+            dropdownMenu.classList.remove('show');
+        }
+    });
+
+
+    /* =====================================================
        SEARCH & FILTER LOGIC
        Filters cards based on visible fragrance name
        ===================================================== */
