@@ -1,0 +1,180 @@
+﻿{
+    "Description":  "Ø¹Ø·Ø± \"Ø§Ù„Ø«Ø§Ø¦Ø±\" (AlthaÃ¯r) Ù…Ù† Ø¯Ø§Ø± \"Ø¨Ø§Ø±ÙÙŠÙˆÙ…Ø² Ø¯ÙŠ Ù…Ø§Ø±Ù„ÙŠ\" (Parfums de Marly) Ù‡Ùˆ Ø¹Ø·Ø± Ø´Ø±Ù‚ÙŠ - ÙØ§Ù†ÙŠÙ„ÙŠØ§ Ù…ØµÙ…Ù… Ù„Ù„Ø±Ø¬Ø§Ù„. ØªÙ… Ø¥Ø·Ù„Ø§Ù‚ Ù‡Ø°Ø§ Ø§Ù„Ø¹Ø·Ø± Ø§Ù„Ø­Ø¯ÙŠØ« ÙÙŠ Ø¹Ø§Ù… 2023ØŒ ÙˆÙ‡Ùˆ Ù…Ù† ØªÙˆÙ‚ÙŠØ¹ Ø§Ù„Ø¹Ø·Ø§Ø±ÙŠÙ† Ø§Ù„Ù…Ø¨Ø¯Ø¹ÙŠÙ† Ø­Ù…ÙŠØ¯ Ù…Ø±Ø§ØªÙŠ-ÙƒØ§Ø´Ø§Ù†ÙŠ Ùˆ Ø¥Ù„ÙŠØ§Ø³ Ø¥Ø±Ù…Ù†ÙŠØ¯Ø³.",
+    "Performance":  [
+                        {
+                            "Label":  "Ø§Ù„ÙÙˆØ­Ø§Ù†",
+                            "Color":  "#C1E8FF",
+                            "Value":  "64",
+                            "ProgressText":  "Ø«Ù‚ÙŠÙ„"
+                        },
+                        {
+                            "Label":  "Ø§Ù„Ø«Ø¨Ø§Øª",
+                            "Color":  "#7DA0CA",
+                            "Value":  "75",
+                            "ProgressText":  "Ø«Ø§Ø¨Øª"
+                        }
+                    ],
+    "Image":  "images/perfumes/male/lthaÃ¯r Parfums de Marly.png",
+    "BrandLogo":  "images/logo/Parfums de Marly.png",
+    "Title":  "Ø§Ù„Ø«Ø§Ø¦Ø± - Ø¨Ø§Ø±ÙÙˆÙ…Ø² Ø¯ÙŠ Ù…Ø§Ø±Ù„ÙŠ",
+    "RatingStars":  "â˜…â˜…â˜…â˜…â˜†",
+    "RatingScore":  "4.41",
+    "NotesHierarchy":  {
+                           "Ù‚Ø§Ø¹Ø¯Ø© Ø§Ù„Ø¹Ø·Ø± (Base Notes)":  [
+                                                                      {
+                                                                          "Name":  "Ø¨Ø±Ø§Ù„ÙŠÙ†",
+                                                                          "Image":  "images/notes/Praline.png"
+                                                                      },
+                                                                      {
+                                                                          "Name":  "Ù…Ø³Ùƒ",
+                                                                          "Image":  "images/notes/Musk.png"
+                                                                      },
+                                                                      {
+                                                                          "Name":  "Ø£Ù…Ø¨Ø±ÙˆÙƒØ³Ø§Ù†",
+                                                                          "Image":  "images/notes/Ambroxan.png"
+                                                                      },
+                                                                      {
+                                                                          "Name":  "Ø®Ø´Ø¨ Ø§Ù„ØºØ§ÙŠØ§Ùƒ",
+                                                                          "Image":  "images/notes/Guaiac wood.png"
+                                                                      },
+                                                                      {
+                                                                          "Name":  "ØªÙˆÙ†ÙƒØ§",
+                                                                          "Image":  "images/notes/Tonka.png"
+                                                                      },
+                                                                      {
+                                                                          "Name":  "Ù„ÙˆØ² Ù…Ø­Ù„Ù‰",
+                                                                          "Image":  "images/notes/Candied Almond.png"
+                                                                      }
+                                                                  ],
+                           "Ù‚Ù„Ø¨ Ø§Ù„Ø¹Ø·Ø± (Heart Notes)":  [
+                                                                   {
+                                                                       "Name":  "ÙØ§Ù†ÙŠÙ„ÙŠØ§ Ø¨ÙˆØ±Ø¨ÙˆÙ†",
+                                                                       "Image":  "images/notes/Bourbon Vanilla.png"
+                                                                   },
+                                                                   {
+                                                                       "Name":  "Ø§Ù„Ø¥Ù„ÙŠÙ…ÙŠ",
+                                                                       "Image":  "images/notes/Elemi.png"
+                                                                   }
+                                                               ],
+                           "Ù…Ù‚Ø¯Ù…Ø© Ø§Ù„Ø¹Ø·Ø± (Top Notes)":  [
+                                                                     {
+                                                                         "Name":  "Ù‚Ø±ÙØ©",
+                                                                         "Image":  "images/notes/Cinnamon.png"
+                                                                     },
+                                                                     {
+                                                                         "Name":  "Ù‡ÙŠÙ„",
+                                                                         "Image":  "images/notes/Cardamom.png"
+                                                                     },
+                                                                     {
+                                                                         "Name":  "Ø²Ù‡Ø± Ø§Ù„Ø¨Ø±ØªÙ‚Ø§Ù„",
+                                                                         "Image":  "images/notes/Orange Blossom.png"
+                                                                     },
+                                                                     {
+                                                                         "Name":  "Ø§Ù„Ø¨Ø±ØºÙ…ÙˆØª",
+                                                                         "Image":  "images/notes/Bergamot.png"
+                                                                     }
+                                                                 ]
+                       },
+    "Dupes":  [
+                  {
+                      "Brand":  "French Avenue",
+                      "Url":  "Liquid Brun.html",
+                      "Name":  "Ù„ÙŠÙƒÙˆØ¯ Ø¨ÙŠØ±Ù†",
+                      "Image":  "images/perfumes/maleDupes/Liquid Brun French Avenue.png"
+                  }
+              ],
+    "Meta":  [
+                 {
+                     "Value":  "Ø´Ø±Ù‚ÙŠ - ÙØ§Ù†ÙŠÙ„ÙŠØ§",
+                     "Label":  "Ø§Ù„Ø¹Ø§Ø¦Ù„Ø© Ø§Ù„Ø¹Ø·Ø±ÙŠØ©"
+                 },
+                 {
+                     "Value":  "Ø­Ù…ÙŠØ¯ Ù…Ø±Ø§ØªÙŠ-ÙƒØ§Ø´Ø§Ù†ÙŠØŒ Ø¥Ù„ÙŠØ§Ø³ Ø¥Ø±Ù…Ù†ÙŠØ¯Ø³",
+                     "Label":  "Ø§Ù„Ø¹Ø·Ø§Ø±ÙˆÙ†"
+                 },
+                 {
+                     "Value":  "2023",
+                     "Label":  "Ø³Ù†Ø© Ø§Ù„Ø¥ØµØ¯Ø§Ø±"
+                 }
+             ],
+    "RatingCount":  "8,499 votes",
+    "Occasions":  {
+                      "winter":  {
+                                     "Name":  "Ø´ØªØ§Ø¡",
+                                     "Level":  "high"
+                                 },
+                      "day":  {
+                                  "Name":  "Ù†Ù‡Ø§Ø±",
+                                  "Level":  "medium"
+                              },
+                      "night":  {
+                                    "Name":  "Ù„ÙŠÙ„",
+                                    "Level":  "high"
+                                },
+                      "summer":  {
+                                     "Name":  "ØµÙŠÙ",
+                                     "Level":  "low"
+                                 },
+                      "autumn":  {
+                                     "Name":  "Ø®Ø±ÙŠÙ",
+                                     "Level":  "high"
+                                 },
+                      "spring":  {
+                                     "Name":  "Ø±Ø¨ÙŠØ¹",
+                                     "Level":  "low"
+                                 }
+                  },
+    "MainNotes":  [
+                      {
+                          "Color":  "#ee363b",
+                          "Percentage":  "95%",
+                          "Name":  "Ø­Ù„Ùˆ"
+                      },
+                      {
+                          "Color":  "#fffec2",
+                          "Percentage":  "90%",
+                          "Name":  "Ø§Ù„ÙØ§Ù†ÙŠÙ„Ø§"
+                      },
+                      {
+                          "Color":  "#d2491c",
+                          "Percentage":  "82%",
+                          "Name":  "ØªØ§Ø¨Ù„ÙŠ Ø¯Ø§ÙØ¦"
+                      },
+                      {
+                          "Color":  "#df9560",
+                          "Percentage":  "60%",
+                          "Name":  "Ø§Ù„Ù‚Ø±ÙØ©"
+                      },
+                      {
+                          "Color":  "#77bfaf",
+                          "Percentage":  "55%",
+                          "Name":  "Ø£Ø±ÙˆÙ…Ø§ØªÙƒ"
+                      },
+                      {
+                          "Color":  "#efe5f1",
+                          "Percentage":  "51%",
+                          "Name":  "Ù…Ø³ÙƒÙŠ"
+                      },
+                      {
+                          "Color":  "#f4e9dd",
+                          "Percentage":  "50%",
+                          "Name":  "Ù†Ø§Ø¹Ù…"
+                      },
+                      {
+                          "Color":  "#fbff90",
+                          "Percentage":  "45%",
+                          "Name":  "Ø§Ù„Ø­Ù…Ø¶ÙŠØ§Øª"
+                      },
+                      {
+                          "Color":  "#d48e67",
+                          "Percentage":  "42%",
+                          "Name":  "Ø§Ù„Ø¹Ù†Ø¨Ø±"
+                      },
+                      {
+                          "Color":  "#f4f7fd",
+                          "Percentage":  "40%",
+                          "Name":  "Ø§Ù„Ø²Ù‡ÙˆØ± Ø§Ù„Ø¨ÙŠØ¶Ø§Ø¡"
+                      }
+                  ],
+    "Category":  "Ù„Ù„Ø±Ø¬Ø§Ù„"
+}

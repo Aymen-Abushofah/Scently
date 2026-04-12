@@ -1,0 +1,512 @@
+/* --- General Styling --- */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(-45deg,
+            #021024,
+            #052659,
+            #5483B3,
+            #021024);
+
+    background-size: 400% 400%;
+    animation: gradient-animation 25s ease infinite;
+    color: #FFFFFF;
+    min-height: 100vh;
+}
+
+.page-wrapper {
+    position: relative;
+    background: linear-gradient(-45deg, var(--dark-blue), var(--mid-blue-1), var(--mid-blue-2), var(--dark-blue));
+    background-size: 400% 400%;
+    animation: gradient-animation 25s ease infinite;
+}
+
+/* Hide the dropdown structure by default on desktop */
+.mobile-only {
+    display: none;
+}
+
+/* --- New Logo Style --- */
+.logo {
+    display: flex;
+    font-family: "Great Vibes", cursive;
+    font-weight: 500;
+    font-size: 40px;
+    font-style: normal;
+    color: #c1e8ff;
+    align-self: center;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    /* Remove underline from link */
+    white-space: nowrap;
+    /* Prevent logo from wrapping */
+}
+
+.logo:hover {
+    color: #ffffff;
+    text-shadow:
+        0 0 6px rgba(193, 232, 255, 0.8),
+        0 0 18px rgba(193, 232, 255, 0.5),
+        0 0 32px rgba(0, 180, 255, 0.35);
+}
+
+/* --- Nav Icon Links (Cart & Favourites) --- */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-icon-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    color: #C1E8FF;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-icon-link:hover {
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.cart-badge-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #7DA0CA;
+    color: #021024;
+    font-size: 11px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* --- New Wrapper for Search and Filters --- */
+.search-and-filters {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+    /* Allows it to take up remaining space */
+    justify-content: flex-end;
+    /* Pushes items to the end (left in RTL) */
+}
+
+
+
+/* --- Header & Filters --- */
+.top-bar {
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: rgba(2, 16, 36, 0.4);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(84, 131, 179, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.search-bar {
+    flex-grow: 1;
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: 1px solid #5483B3;
+    background: rgba(5, 38, 89, 0.6);
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Cairo', sans-serif;
+    transition: all 0.4s ease;
+}
+
+.search-bar:focus {
+    outline: none;
+    box-shadow: 0 0 20px rgba(125, 160, 202, 0.6);
+    border-color: #7DA0CA;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+}
+
+.filter-anchor {
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    background: rgba(5, 38, 89, 0.6);
+    color: #7DA0CA;
+    transition: all 0.3s ease;
+}
+
+.filter-anchor:hover,
+.filter-anchor.active {
+    background-color: #7DA0CA;
+    color: #021024;
+    transform: translateY(-3px);
+}
+
+/* --- Section Headers --- */
+.section-header {
+    scroll-margin-top: 120px;
+    grid-column: 1 / -1;
+    font-size: 32px;
+    color: #C1E8FF;
+    border-bottom: 1px solid #5483B3;
+    padding-bottom: 15px;
+    margin: 40px 0 20px 0;
+}
+
+/* --- Fragrance Display & Cascade Entry --- */
+#fragrance-display {
+    padding: 40px 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+#fragrance-display h2:first-of-type {
+    margin-top: 0;
+}
+
+.fragrance-card-link {
+    text-decoration: none;
+    /* Remove underline from the link */
+    color: inherit;
+    /* Inherit text color from its children */
+    display: block;
+    /* Make the link a block-level element to wrap the card */
+    /* All card styling now applies to the link, or is inherited by the card div itself */
+}
+
+/* --- Card Structure & NEW Hover Effect --- */
+.fragrance-card {
+    position: relative;
+    border-radius: 18px;
+    aspect-ratio: 2 / 3;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* UI/UX: Changed transition to be smoother for this effect */
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.fragrance-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- 1. The Card itself lifts slightly on hover --- */
+.fragrance-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    transform: translateY(-10px);
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* --- 2. The Image now moves UP and scales on hover --- */
+.fragrance-card .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.fragrance-card:hover .image-container img {
+    transform: translateY(-60px) scale(1.1);
+    /* The "Pop Out" Effect */
+}
+
+/* --- Overlay & Content --- */
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 20%, transparent);
+    color: #FFFFFF;
+    pointer-events: none;
+    transition: height 0.4s ease;
+    border-radius: 0px 0px 17px 17px;
+}
+
+.fragrance-card:hover .card-overlay {
+    height: 50%;
+}
+
+.fragrance-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.details-wrapper {
+    position: relative;
+    height: 40px;
+}
+
+.details-idle,
+.details-hover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.details-idle {
+    justify-content: flex-end;
+    opacity: 1;
+}
+
+.details-hover {
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+.brand-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-name {
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.brand-logo {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+.fragrance-type {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.fragrance-rating span {
+    font-size: 18px;
+    color: #FFD700;
+}
+
+/* --- Hover Animations for text remain the same --- */
+
+.fragrance-card:hover .details-idle {
+    opacity: 0;
+    transform: translateY(-15px);
+}
+
+.fragrance-card:hover .details-hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==========================================================================
+   4. DEFINITIVE & FINAL RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* --- BREAKPOINT 1: Tablets & Smaller Desktops (< 1024px) --- */
+@media (max-width: 1024px) {
+
+    /* Main change: The desktop navigation switches to a mobile dropdown. */
+    .filters .desktop-only {
+        display: none;
+    }
+
+    .filters .mobile-only {
+        display: block;
+    }
+
+    /* ... (Keep your dropdown styles here from the previous version) ... */
+    /* Dropdown Styles */
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-toggle {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 15px;
+        border-radius: 20px;
+        font-family: 'Cairo', sans-serif;
+        font-size: 15px;
+        cursor: pointer;
+        background: rgba(5, 38, 89, 0.6);
+        color: #7DA0CA;
+        border: 1px solid #5483B3;
+        transition: all 0.3s ease;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        background: rgba(12, 45, 97, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--mid-blue-2);
+        border-radius: 10px;
+        padding: 8px;
+        min-width: 150px;
+        z-index: 110;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    .dropdown-menu.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .dropdown-menu .filter-anchor {
+        display: block;
+        padding: 10px 15px;
+        border-radius: 6px;
+    }
+
+    #fragrance-display {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+
+/* --- BREAKPOINT 2: All Phones (< 768px) ---
+ * Main changes: Nav bar becomes a full-width, two-row header.
+*/
+@media (max-width: 768px) {
+
+    /* --- 1. THE FIX: A Professional Full-Width Vertical Header --- */
+    .top-bar {
+        width: 100%;
+        /* Take full width */
+        border-radius: 0;
+        /* Remove the rounded corners */
+        flex-direction: column;
+        /* Stacks items vertically */
+        direction: ltr;
+        gap: 15px;
+        padding: 15px 20px;
+        /* Adjust padding for the new look */
+        margin: 0;
+        /* Reset margin */
+        position: sticky;
+        /* Re-enable sticky for a modern feel */
+        top: 0;
+    }
+
+    .logo {
+        order: -1;
+        /* Ensures the logo is always on top */
+    }
+
+    /* The wrapper for search and filters */
+    .search-and-filters {
+        display: flex;
+        width: 100%;
+        gap: 15px;
+        align-items: center;
+        margin: 0;
+        /* THE FIX: Reverse the row to put search on the right */
+        flex-direction: row-reverse;
+    }
+
+    .search-bar {
+        direction: rtl;
+        flex-grow: 1;
+        /* Let the search bar take available space */
+    }
+
+    .filters {
+        flex-shrink: 0;
+        /* Prevent the filter button from shrinking */
+    }
+
+    /* ... (The rest of your mobile styles for cards, etc., remain the same) ... */
+    #fragrance-display {
+        grid-template-columns: repeat(2, 1fr);
+        /* etc. */
+    }
+}
+
+
+/* --- BREAKPOINT 3: Very Narrow Phones (< 482px) --- */
+@media (max-width: 482px) {
+    #fragrance-display {
+        grid-template-columns: 1fr;
+        /* Single column layout */
+    }
+
+    .logo {
+        font-size: 36px;
+    }
+
+    .search-bar {
+        height: 48px;
+        font-size: 14px;
+    }
+}

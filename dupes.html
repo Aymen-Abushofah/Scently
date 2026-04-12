@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة البدائل</title>
+    <link rel="shortcut icon" href="icons/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/fragrances-style.css">
+
+</head>
+
+<body>
+
+    <header class="top-bar">
+
+
+        <!-- 2. A new wrapper for search and filters -->
+        <div class="search-and-filters">
+            <input type="search" id="search-bar" class="search-bar" placeholder="ابحث عن عطرك ...">
+
+            <div class="filters">
+                <!-- Desktop Anchors -->
+                <a href="#" data-filter="all" class="filter-anchor desktop-only active">الكل</a>
+                <a href="#men" data-filter="men" class="filter-anchor desktop-only">رجالي</a>
+                <a href="#women" data-filter="women" class="filter-anchor desktop-only">نسائي</a>
+                <a href="#unisex" data-filter="unisex" class="filter-anchor desktop-only">للجنسين</a>
+
+                <!-- Mobile Dropdown -->
+                <div class="dropdown mobile-only">
+                    <button class="dropdown-toggle">
+                        <span>فلترة</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="#" data-filter="all" class="filter-anchor active">الكل</a>
+                        <a href="#men" data-filter="men" class="filter-anchor">رجالي</a>
+                        <a href="#women" data-filter="women" class="filter-anchor">نسائي</a>
+                        <a href="#unisex" data-filter="unisex" class="filter-anchor">للجنسين</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Icons -->
+        <div class="nav-icons">
+            <a href="favourites.html" class="nav-icon-link" title="المفضلة">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                </svg>
+            </a>
+            <a href="cart.html" class="nav-icon-link" title="السلة">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1" />
+                    <circle cx="20" cy="21" r="1" />
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                </svg>
+                <span class="cart-badge-count" style="display:none;">0</span>
+            </a>
+        </div>
+        <!-- 1. The New Logo Link -->
+        <a href="index.html" class="logo">Scently</a>
+    </header>
+
+
+    <main id="fragrance-display">
+
+        <!----------------------------------------------------------- Men Dupes Fragrances -------------------------------------------------------->
+
+        <h2 id="men" class="section-header">البدائل الرجالية</h2>
+
+        <!-- Card 1 -->
+        <!-- استبدل # برابط الصفحة الخاصة بالعطر -->
+        <div class="fragrance-card" data-name="ليكود بيرن"
+            onclick="window.location.href='fragrance.html?id=liquid-brun'">
+            <div class="image-container"><img src="images/perfumes/maleDupes/Liquid Brun French Avenue.png"
+                    alt="Liquid Brun"></div>
+            <div class="card-overlay">
+                <h3 class="fragrance-name">ليكود بيرن</h3>
+                <div class="details-wrapper">
+                    <div class="details-idle">
+                        <div class="brand-info">
+                            <p class="brand-name">French Avenue</p><img src="images/logo/French Avenue.webp"
+                                alt="French Avenue Logo" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="details-hover">
+                        <p class="fragrance-type">Eau de Parfum</p>
+                        <div class="fragrance-rating"><span>★★★★★</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="fragrance-card" data-name="مروة" onclick="window.location.href='fragrance.html?id=marwa'">
+            <div class="image-container"><img src="images/perfumes/maleDupes/Marwa Arabiyat Prestige.png" alt="Marwa">
+            </div>
+            <div class="card-overlay">
+                <h3 class="fragrance-name">مروة</h3>
+                <div class="details-wrapper">
+                    <div class="details-idle">
+                        <div class="brand-info">
+                            <p class="brand-name">Arabiyat</p><img src="images/logo/Arabiyat Prestige.jpg"
+                                alt="Arabiyat Prestige Logo" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="details-hover">
+                        <p class="fragrance-type">Eau de Parfum</p>
+                        <div class="fragrance-rating"><span>★★★★★</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="fragrance-card" data-name="أسد" onclick="window.location.href='fragrance.html?id=asad'">
+            <div class="image-container"><img src="images/perfumes/maleDupes/Asad Lattafa Perfumes.png" alt="Asad">
+            </div>
+            <div class="card-overlay">
+                <h3 class="fragrance-name">أسد</h3>
+                <div class="details-wrapper">
+                    <div class="details-idle">
+                        <div class="brand-info">
+                            <p class="brand-name">Lattafa</p><img src="images/logo/Lattafa.jpeg" alt="Lattafa Logo"
+                                class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="details-hover">
+                        <p class="fragrance-type">Eau de Parfum</p>
+                        <div class="fragrance-rating"><span>★★★★☆</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="fragrance-card" data-name="ريفيري أكوا"
+            onclick="window.location.href='fragrance.html?id=reverie-aqua'">
+            <div class="image-container"><img src="images/perfumes/maleDupes/Reverie Aqua Zimaya.png"
+                    alt="Reverie Aqua"></div>
+            <div class="card-overlay">
+                <h3 class="fragrance-name">ريفيري أكوا</h3>
+                <div class="details-wrapper">
+                    <div class="details-idle">
+                        <div class="brand-info">
+                            <p class="brand-name">Zimaya</p><img src="images/logo/Zimaya.webp" alt="Zimaya Logo"
+                                class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="details-hover">
+                        <p class="fragrance-type">Eau de Parfum</p>
+                        <div class="fragrance-rating"><span>★★★★★</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!----------------------------------------------------------- Women Dupes Fragrances -------------------------------------------------------->
+
+        <h2 id="women" class="section-header">البدائل النسائية</h2>
+
+        <!-- Card 1 -->
+        <div class="fragrance-card" data-name="جولد" onclick="window.location.href='fragrance.html?id=gold'">
+            <div class="image-container"><img src="images/perfumes/femaleDupes/Gold Armaf.png" alt="Gold"></div>
+            <div class="card-overlay">
+                <h3 class="fragrance-name">جولد</h3>
+                <div class="details-wrapper">
+                    <div class="details-idle">
+                        <div class="brand-info">
+                            <p class="brand-name">Armaf</p><img src="images/logo/Armaf.jpeg" alt="Armaf Logo"
+                                class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="details-hover">
+                        <p class="fragrance-type">Eau de Parfum</p>
+                        <div class="fragrance-rating"><span>★★★★☆</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="fragrance-card" data-name="أميرة العرب"
+            onclick="window.location.href='fragrance.html?id=ameerat-al-arab'">
+            <div class="image-container"><img src="images/perfumes/femaleDupes/Ameerat Al Arab Asdaaf.png"
+                    alt="Ameerat Al Arab"></div>
+            <div class="card-overlay">
+                <h3 class="fragrance-name">أميرة العرب</h3>
+                <div class="details-wrapper">
+                    <div class="details-idle">
+                        <div class="brand-info">
+                            <p class="brand-name">Asdaaf</p><img src="images/logo/Asdaaf.jpg" alt="Asdaf Logo"
+                                class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="details-hover">
+                        <p class="fragrance-type">Eau de Parfum</p>
+                        <div class="fragrance-rating"><span>★★★★☆</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="fragrance-card" data-name="ميس أروجيت"
+            onclick="window.location.href='fragrance.html?id=miss-arrogate'">
+            <div class="image-container"><img src="images/perfumes/femaleDupes/Miss Arrogate Assaf.png"
+                    alt="Miss Arrogate"></div>
+            <div class="card-overlay">
+                <h3 class="fragrance-name">ميس أروجيت</h3>
+                <div class="details-wrapper">
+                    <div class="details-idle">
+                        <div class="brand-info">
+                            <p class="brand-name">Assaf</p><img src="images/logo/Assaf.jpg" alt="Assaf Logo"
+                                class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="details-hover">
+                        <p class="fragrance-type">Eau de Parfum</p>
+                        <div class="fragrance-rating"><span>★★★★☆</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="fragrance-card" data-name="ميستيك بوكيه"
+            onclick="window.location.href='fragrance.html?id=mystique-bouquet'">
+            <div class="image-container"><img src="images/perfumes/femaleDupes/Mystique Bouquet Afnan.png"
+                    alt="Mystique Bouquet"></div>
+            <div class="card-overlay">
+                <h3 class="fragrance-name">ميستيك بوكيه</h3>
+                <div class="details-wrapper">
+                    <div class="details-idle">
+                        <div class="brand-info">
+                            <p class="brand-name">Afnan</p><img src="images/logo/Afnan.jpeg" alt="Afnan Logo"
+                                class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="details-hover">
+                        <p class="fragrance-type">Eau de Parfum</p>
+                        <div class="fragrance-rating"><span>★★★★☆</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!----------------------------------------------------------- Unisex Dupes Fragrances -------------------------------------------------------->
+
+        <h2 id="unisex" class="section-header">بدائل للجنسين</h2>
+
+        <!-- Card 1 -->
+        <div class="fragrance-card" data-name="إكلاير" onclick="window.location.href='fragrance.html?id=eclaire'">
+            <div class="image-container"><img src="images/perfumes/unisexDupes/Eclair Lattafa.png" alt="Eclair"></div>
+            <div class="card-overlay">
+                <h3 class="fragrance-name">إكلاير</h3>
+                <div class="details-wrapper">
+                    <div class="details-idle">
+                        <div class="brand-info">
+                            <p class="brand-name">Lattafa</p><img src="images/logo/Lattafa.jpeg" alt="Lattafa Logo"
+                                class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="details-hover">
+                        <p class="fragrance-type">Eau de Parfum</p>
+                        <div class="fragrance-rating"><span>★★★★☆</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="fragrance-card" data-name="خمرة" onclick="window.location.href='fragrance.html?id=khamrah'">
+            <div class="image-container"><img src="images/perfumes/unisexDupes/Khamrah Lattafa Perfumes.png"
+                    alt="Khamrah"></div>
+            <div class="card-overlay">
+                <h3 class="fragrance-name">خمرة</h3>
+                <div class="details-wrapper">
+                    <div class="details-idle">
+                        <div class="brand-info">
+                            <p class="brand-name">Lattafa</p><img src="images/logo/Lattafa.jpeg" alt="Lattafa Logo"
+                                class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="details-hover">
+                        <p class="fragrance-type">Eau de Parfum</p>
+                        <div class="fragrance-rating"><span>★★★★☆</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="fragrance-card" data-name="أنا الأبيض"
+            onclick="window.location.href='fragrance.html?id=ana-abiyedh'">
+            <div class="image-container"><img src="images/perfumes/unisexDupes/Ana Abiyedh Lattafa Perfumes.png"
+                    alt="Ana Abiyedh"></div>
+            <div class="card-overlay">
+                <h3 class="fragrance-name">أنا الأبيض</h3>
+                <div class="details-wrapper">
+                    <div class="details-idle">
+                        <div class="brand-info">
+                            <p class="brand-name">Lattafa</p><img src="images/logo/Lattafa.jpeg" alt="Lattafa Logo"
+                                class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="details-hover">
+                        <p class="fragrance-type">Eau de Parfum</p>
+                        <div class="fragrance-rating"><span>★★★★☆</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="fragrance-card" data-name="أفتر إيفكت"
+            onclick="window.location.href='fragrance.html?id=after-effect'">
+            <div class="image-container"><img src="images/perfumes/unisexDupes/After Effect French Avenue.png"
+                    alt="After Effect"></div>
+            <div class="card-overlay">
+                <h3 class="fragrance-name">أفتر إيفكت</h3>
+                <div class="details-wrapper">
+                    <div class="details-idle">
+                        <div class="brand-info">
+                            <p class="brand-name">French Avenue</p><img src="images/logo/French Avenue.webp"
+                                alt="French Avenue Logo" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="details-hover">
+                        <p class="fragrance-type">Extrait de Parfum</p>
+                        <div class="fragrance-rating"><span>★★★★☆</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- أضف هذا القسم الجديد -->
+    <div id="no-results-message" style="display: none; text-align: center; padding: 80px 40px;">
+        <h2 style="font-size: 28px; color: var(--light-blue-2); margin-bottom: 10px;">لا توجد نتائج مطابقة</h2>
+        <p style="font-size: 16px; color: var(--light-blue-1);">حاول استخدام كلمة بحث مختلفة أو تصفح الفئات.</p>
+    </div>
+
+
+    <script src="js/cart-manager.js"></script>
+    <script src="js/fragrances-script.js"></script>
+
+</body>
+
+</html>

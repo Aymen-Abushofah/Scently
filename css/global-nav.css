@@ -1,0 +1,127 @@
+/* ==========================================================================
+   GLOBAL NAVIGATION STYLES
+   ========================================================================== */
+
+/* 1. UNIVERSAL HEADER LAYOUT UTILITY
+   Ensures: [Logo on Far Right] | [Search/Links] | [Icons on Far Left]
+   Assumes <html dir="rtl">
+*/
+.scently-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* 2. UNIVERSAL LOGO STYLING */
+.logo {
+    font-family: "Great Vibes", cursive;
+    font-size: 40px;
+    color: #C1E8FF;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.logo:hover {
+    color: #fff;
+    text-shadow:
+        0 0 6px rgba(193, 232, 255, 0.8),
+        0 0 18px rgba(193, 232, 255, 0.5);
+    transform: translateY(-1px);
+}
+
+/* 3. NAVIGATION ICONS WRAPPER */
+.scently-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Spacing between heart and cart */
+}
+
+/* 4. INDIVIDUAL NAVIGATION ITEM (HEART / CART) */
+.scently-nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(12, 45, 97, 0.4);
+    border: 1px solid rgba(84, 131, 179, 0.3);
+    border-radius: 50%;
+    color: #C1E8FF;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.scently-nav-item svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    transition: transform 0.3s;
+}
+
+/* Hover Effects */
+.scently-nav-item:hover {
+    color: #fff;
+    background: rgba(84, 131, 179, 0.5);
+    border-color: #C1E8FF;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.scently-nav-item:hover svg {
+    transform: scale(1.1);
+}
+
+/* 5. BADGE COUNT */
+.cart-badge-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background-color: #7DA0CA;
+    color: #021024;
+    font-size: 0.75rem;
+    font-weight: 700;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 0 4px;
+    /* for larger numbers */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .scently-nav-actions {
+        gap: 10px;
+    }
+
+    .scently-nav-item {
+        width: 36px;
+        height: 36px;
+    }
+
+    .scently-nav-item svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .cart-badge-count {
+        min-width: 18px;
+        height: 18px;
+        font-size: 0.65rem;
+    }
+
+    .logo {
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Scently Fragrance</title>
+    <link rel="shortcut icon" href="icons/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/details-style.css">
+</head>
+
+<body>
+
+    <!-- 1. Top Bar -->
+    <header class="top-bar">
+        <!-- 1. Search bar is now on the right -->
+        <div class="search-bar-container">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <input type="search" class="search-input" id="global-search-input" placeholder="...ابحث عن عطر">
+
+            <!-- The new dynamic dropdown for results -->
+            <div class="search-results-dropdown" id="search-results"></div>
+        </div>
+
+        <!-- Global Nav Icons -->
+        <a href="favourites.html" class="cart-icon-wrapper desktop-only" style="margin-right:auto; margin-left:10px;"
+            title="المفضلة">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+        </a>
+        <a href="cart.html" class="cart-icon-wrapper desktop-only" style="margin-left:20px;" title="السلة">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-badge-count" style="display:none;">0</span>
+        </a>
+
+        <!-- 2. Logo is now on the left -->
+        <a href="index.html" class="logo">Scently</a>
+    </header>
+
+    <div class="page-container">
+        <!-- 2. Fragrance Name Section -->
+        <section class="title-section">
+            <div class="title-text">
+                <h1 id="fragrance-title"></h1>
+                <span id="fragrance-category" class="fragrance-category"></span>
+            </div>
+            <div class="heart-container" title="Like">
+                <input type="checkbox" class="checkbox" id="wishlist-checkbox">
+                <div class="svg-container">
+                    <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                        </path>
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                        </path>
+                    </svg>
+                    <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="10,10 20,20"></polygon>
+                        <polygon points="10,50 20,50"></polygon>
+                        <polygon points="20,80 30,70"></polygon>
+                        <polygon points="90,10 80,20"></polygon>
+                        <polygon points="90,50 80,50"></polygon>
+                        <polygon points="80,80 70,70"></polygon>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 3. Main Data Section -->
+        <main class="main-data-section">
+            <!-- Right Side -->
+            <div class="right-side">
+                <div class="fragrance-image-container">
+                    <img id="fragrance-image" src="" alt="Perfume Bottle">
+                </div>
+                <div class="fragrance-main-rating">
+                    <div id="rating-score" class="rating-score"></div>
+                    <div id="rating-stars" class="rating-stars"></div>
+                    <div id="rating-count" class="rating-count"></div>
+                </div>
+
+                <!-- E-Commerce Action Bar -->
+                <section class="action-bar-section">
+                    <div class="price-display">
+                        <span class="currency">$</span><span id="fragrance-price">0</span>
+                    </div>
+                    <div class="action-buttons">
+                        <button id="add-to-cart-btn" class="action-btn primary-btn">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                            إضافة للسلة
+                        </button>
+                        <button id="buy-now-btn" class="action-btn secondary-btn">شراء الآن</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Left Side -->
+            <div class="left-side">
+                <div class="brand-logo-container">
+                    <img id="brand-logo" src="" alt="Brand Logo">
+                </div>
+
+                <div class="main-notes-container">
+                    <h3>النوتات الرئيسية</h3>
+                    <div id="main-notes-grid" class="notes-grid-sliders">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="full-width-stats-section">
+            <div class="stats-wrapper">
+                <div id="occasions-container" class="occasions-container">
+                    <!-- Populated by JS -->
+                </div>
+
+                <!-- THE NEW PERFORMANCE CONTAINER -->
+                <div id="performance-container" class="performance-container">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Separator & Description -->
+        <hr class="section-separator">
+
+        <section class="description-section">
+            <!-- 1. The Main Description Content -->
+            <div id="description-content" class="description-content">
+                <!-- Populated by JS -->
+            </div>
+
+            <!-- 2. The Quick Facts / Meta Box -->
+            <div id="perfumer-details" class="perfumer-details">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <hr class="section-separator">
+
+        <!-- Notes Breakdown Section -->
+        <section id="notes-breakdown" class="notes-breakdown">
+            <!-- Populated by JS -->
+        </section>
+
+        <!-- ======================================================== -->
+        <!-- NEW: Dupes Section -->
+        <!-- ======================================================== -->
+        <hr class="section-separator">
+
+        <section id="dupes-section" class="dupes-section" style="display:none;">
+            <h2>البدائل المقترحة</h2>
+            <div id="dupes-grid" class="dupes-grid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+    </div> <!-- End of Page Container -->
+
+    <!-- Load data first, then cart manager, then page logic, then search logic -->
+    <script src="js/fragrances-data.js"></script>
+    <script src="js/cart-manager.js"></script>
+    <script src="js/fragrance-page.js"></script>
+    <script src="js/search.js"></script>
+
+</body>
+
+</html>

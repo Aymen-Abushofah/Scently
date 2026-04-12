@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سلة المشتريات - Scently</title>
+    <link rel="shortcut icon" href="icons/favicon.png" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/ecommerce.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/global-nav.css">
+</head>
+
+<body class="ecommerce-body">
+
+    <!-- Global Nav -->
+    <div class="nav ecommerce-nav">
+        <div class="scently-nav-container">
+            <a href="index.html" class="logo">Scently</a>
+            <div class="scently-nav-actions">
+                <a href="favourites.html" class="scently-nav-item" title="المفضلة">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                    </svg>
+                </a>
+                <a href="index.html" class="back-link">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                    الاستمرار في التسوق
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-container cart-container">
+        <h1 class="page-title">حقيبة التسوق</h1>
+        <p class="trust-badge"><svg viewBox="0 0 24 24" width="16" height="16" fill="green">
+                <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+            </svg> <span>دفع آمن ومعتمد 100%</span></p>
+
+        <div class="cart-layout" id="cart-layout">
+            <!-- Left: Cart Items -->
+            <div class="cart-items" id="cart-items">
+                <!-- Rendered by JS -->
+            </div>
+
+            <!-- Right: Order Summary -->
+            <div class="cart-summary">
+                <h2>ملخص الطلب</h2>
+
+                <div class="promo-box">
+                    <input type="text" id="promo-input" placeholder="هل لديك كود خصم؟">
+                    <button id="apply-promo">تطبيق</button>
+                </div>
+
+                <div class="summary-line">
+                    <span>المجموع الفرعي</span>
+                    <span id="subtotal-price">$0</span>
+                </div>
+                <div class="summary-line">
+                    <span>رسوم الشحن</span>
+                    <span>مجاناً</span>
+                </div>
+
+                <hr class="summary-divider">
+
+                <div class="summary-line total-line">
+                    <span>الإجمالي</span>
+                    <strong id="total-price">$0</strong>
+                </div>
+
+                <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+                    متابعة الدفع
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="empty-cart-state" class="empty-state" style="display:none;">
+            <svg viewBox="0 0 24 24" width="80" height="80" stroke="#7DA0CA" fill="none" stroke-width="1.5">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <h2>سلة التسوق فارغة</h2>
+            <p>اكتشف مجموعتنا من العطور الفاخرة</p>
+            <button class="checkout-btn" style="width:auto; margin-top: 20px; padding: 10px 40px;"
+                onclick="window.location.href='fragrances.html'">تسوق الآن</button>
+        </div>
+
+    </div>
+
+    <script src="js/cart-manager.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

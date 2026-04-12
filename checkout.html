@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إتمام الدفع - Scently</title>
+    <link rel="shortcut icon" href="icons/favicon.png" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/ecommerce.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/global-nav.css">
+</head>
+
+<body class="ecommerce-body">
+
+    <div class="nav ecommerce-nav">
+        <div class="scently-nav-container">
+            <a href="index.html" class="logo">Scently</a>
+            <a href="cart.html" class="back-link">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6" />
+                </svg>
+                العودة للسلة
+            </a>
+        </div>
+    </div>
+
+    <div class="page-container cart-container" id="checkout-main-container">
+        <h1 class="page-title">إتمام الطلب</h1>
+        <p class="trust-badge"><svg viewBox="0 0 24 24" width="16" height="16" fill="green">
+                <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+            </svg> <span>معلوماتك مشفرة بـ SSL ومحمية 100%</span></p>
+
+        <div class="cart-layout">
+
+            <div class="checkout-form">
+                <!-- Step 1: Customer -->
+                <div class="checkout-step" id="step-1">
+                    <h2><span class="step-num">1</span> معلومات العميل</h2>
+                    <div class="input-grid full">
+                        <div class="input-group">
+                            <label>البريد الإلكتروني للطلب المباشر (أو سجل الدخول)</label>
+                            <input type="email" placeholder="example@gmail.com" id="checkout-email" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Shipping -->
+                <div class="checkout-step" id="step-2">
+                    <h2><span class="step-num">2</span> عنوان الشحن</h2>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>الاسم الأول</label>
+                            <input type="text" placeholder="الاسم الأول" required>
+                        </div>
+                        <div class="input-group">
+                            <label>اسم العائلة</label>
+                            <input type="text" placeholder="اسم العائلة" required>
+                        </div>
+                    </div>
+                    <div class="input-grid full" style="margin-top: 15px;">
+                        <div class="input-group">
+                            <label>العنوان (الشارع / الحي)</label>
+                            <input type="text" placeholder="طرابلس، شارع عمر المختار" required>
+                        </div>
+                    </div>
+                    <div class="input-grid" style="margin-top: 15px;">
+                        <div class="input-group">
+                            <label>رقم الهاتف</label>
+                            <input type="tel" placeholder="+218 91 000 0000" required>
+                        </div>
+                        <div class="input-group">
+                            <label>المدينة</label>
+                            <input type="text" placeholder="طرابلس" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Payment -->
+                <div class="checkout-step" id="step-3">
+                    <h2><span class="step-num">3</span> طريقة الدفع</h2>
+
+                    <div class="payment-options">
+                        <div class="payment-card active" onclick="selectPayment(this, 'card')">
+                            💳 بطاقة ائتمانية / مدى
+                        </div>
+                        <div class="payment-card" onclick="selectPayment(this, 'cod')">
+                            💵 الدفع عند الاستلام
+                        </div>
+                    </div>
+
+                    <!-- Card Form -->
+                    <div id="credit-card-form">
+                        <div class="input-grid full">
+                            <div class="input-group">
+                                <label>رقم البطاقة</label>
+                                <input type="text" placeholder="0000 0000 0000 0000" maxlength="19">
+                            </div>
+                        </div>
+                        <div class="input-grid" style="margin-top: 15px;">
+                            <div class="input-group">
+                                <label>تاريخ الانتهاء</label>
+                                <input type="text" placeholder="MM/YY">
+                            </div>
+                            <div class="input-group">
+                                <label>رمز الأمان (CVV)</label>
+                                <input type="text" placeholder="123" maxlength="3">
+                            </div>
+                        </div>
+                        <div class="input-grid full" style="margin-top: 15px;">
+                            <div class="input-group">
+                                <label>الاسم على البطاقة</label>
+                                <input type="text" placeholder="الاسم كما هو مطبوع">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary Panel -->
+            <div class="cart-summary">
+                <h2>مراجعة الطلب</h2>
+                <div id="checkout-items-list" style="margin-bottom: 20px; font-size: 0.95rem; color: #7DA0CA;">
+                    <!-- Inserted heavily truncated items list -->
+                </div>
+
+                <div class="summary-line">
+                    <span>المجموع الفرعي</span>
+                    <span id="subtotal-price">$0</span>
+                </div>
+                <div class="summary-line">
+                    <span>رسوم الشحن</span>
+                    <span id="shipping-price">مجاناً</span>
+                </div>
+                <hr class="summary-divider">
+                <div class="summary-line total-line">
+                    <span>الإجمالي المقدر</span>
+                    <strong id="total-price">$0</strong>
+                </div>
+
+                <button class="checkout-btn" id="place-order-btn">
+                    تأكيد الطلب
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12l5 5l10 -10" />
+                    </svg>
+                </button>
+                <div style="text-align: center; margin-top: 15px; font-size: 0.85rem; color: rgba(255,255,255,0.4);">
+                    من خلال تأكيدك للطلب، فأنت توافق على سياسة الاسترجاع والشروط الخاصة بنا.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Success Output overlay (dynamically shown via JS) -->
+    <div id="success-overlay"
+        style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; background: rgba(2, 16, 36, 0.9); backdrop-filter: blur(20px); flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+        <svg viewBox="0 0 24 24" width="100" height="100" fill="none" stroke="#4CAF50" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 20px;">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        <h1 style="font-size: 3rem; margin-bottom: 15px; color: #fff;">تم استلام طلبك بنجاح!</h1>
+        <p style="font-size: 1.2rem; color: #7DA0CA; margin-bottom: 30px;">شكراً لثقتك بنا. رقم طلبك هو: <strong
+                style="color: #C1E8FF;" id="order-id">#10294</strong></p>
+        <button class="checkout-btn" style="width: 250px;" onclick="window.location.href='index.html'">العودة
+            للرئيسية</button>
+    </div>
+
+    <script src="js/cart-manager.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+
+</html>
