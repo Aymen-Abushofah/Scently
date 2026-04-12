@@ -13,10 +13,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    border-bottom: 1px solid rgba(84, 131, 179, 0.2);
+    padding: 15px 5%;
+    margin: 20px;
+    border: 1px solid rgba(84, 131, 179, 0.2);
+    border-radius: 20px;
     position: sticky;
-    top: 0;
+    top: 20px;
     z-index: 100;
     background: rgba(2, 16, 36, 0.6);
     backdrop-filter: blur(15px);
