@@ -516,11 +516,17 @@
 
     .page-title {
         font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .trust-badge {
+        justify-content: center;
     }
 
     .cart-item {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
         padding: 15px;
         border-radius: 15px;
     }
@@ -530,6 +536,12 @@
         height: 80px;
     }
 
+    .item-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .item-name {
         font-size: 1rem;
     }
@@ -537,12 +549,13 @@
     .item-actions {
         width: 100%;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        gap: 15px;
     }
 
     .remove-btn {
-        align-self: flex-end;
+        align-self: center;
     }
 
     .input-grid {
