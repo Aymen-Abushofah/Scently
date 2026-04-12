@@ -124,4 +124,39 @@
     .logo {
         font-size: 32px;
     }
+
+    .back-link {
+        font-size: 0.85rem;
+    }
+}
+
+/* --- Narrow phones (≤480px) --- */
+@media (max-width: 480px) {
+    .scently-nav-actions {
+        gap: 8px;
+    }
+
+    .scently-nav-item {
+        width: 32px;
+        height: 32px;
+    }
+
+    .scently-nav-item svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .back-link {
+        font-size: 0.8rem;
+        gap: 4px;
+    }
+
+    .back-link svg {
+        width: 16px;
+        height: 16px;
+    }
 }

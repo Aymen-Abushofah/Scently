@@ -13,8 +13,10 @@ body {
   background: radial-gradient(circle at top, #052659, #021024 70%);
   display: flex;
   justify-content: center;  /* horizontal center */
-  align-items: center;      /* vertical center */
+  align-items: flex-start;  /* allow scroll on short phones */
   direction: rtl;           /* Arabic RTL */
+  padding: 40px 20px;
+  overflow-y: auto;
 }
 
 /* Wrapper: flex + perspective for flip */
@@ -25,8 +27,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 150px;
+  margin-top: 80px;
 }
 
 /* Card Container */
@@ -159,6 +160,7 @@ button:hover {
 @media (max-width: 420px) {
   .signup-wrapper {
     max-width: 90%;
+    margin-top: 40px;
   }
 
   .glass-card {
@@ -166,3 +168,26 @@ button:hover {
   }
 }
 
+@media (max-width: 350px) {
+  .signup-wrapper {
+    margin-top: 20px;
+  }
+
+  .glass-card {
+    padding: 25px 18px;
+  }
+
+  .glass-card h1 {
+    font-size: 1.3rem;
+  }
+
+  input {
+    padding: 12px 14px;
+    font-size: 0.85rem;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}

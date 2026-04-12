@@ -97,7 +97,8 @@ body {
 /* The main container for the search bar */
 .search-bar-container {
     position: relative;
-    width: 350px; /* Give it a slightly larger default width */
+    width: 350px;
+    max-width: 100%;
     display: flex;
     align-items: center;
 }
@@ -113,7 +114,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.search-bar-container { position: relative; width: 350px; display: flex; align-items: center; }
+.search-bar-container { position: relative; width: 350px; max-width: 100%; display: flex; align-items: center; }
 .search-icon {
     position: absolute; right: 20px; width: 20px; height: 20px;
     color: #5483B3; pointer-events: none; transition: all 0.3s ease;
@@ -213,7 +214,7 @@ body {
     padding: 40px 0;
 }
 .title-text h1 {
-    font-size: 3.5rem;
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
     font-weight: 700;
     margin-bottom: 15px;
 }
@@ -330,13 +331,11 @@ body {
 
 .fragrance-image-container {
     width: 100%;
-    /* --- Set a specific height to match the content on the left --- */
-    /* This value is calculated based on the approximate height of the left column's content */
-    height: 596px; 
+    min-height: 300px;
+    max-height: 596px;
     border-radius: 20px;
     overflow: hidden;
     background: rgba(0, 0, 0, 0.2);
-    /* Added to perfectly center the image */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -809,10 +808,160 @@ body {
     .main-data-section { flex-direction: column; }
     .right-side, .left-side { width: 100%; }
     .title-section h1 { font-size: 2.5rem; }
+    .fragrance-image-container {
+        max-height: 450px;
+    }
 }
+
 @media (max-width: 768px) {
     .description-section { flex-direction: column; }
     .description-section p, .perfumer-details { width: 100%; }
-    .top-bar { padding: 15px 20px; }
-    .search-bar-container { width: 250px; }
+    .top-bar {
+        padding: 15px 15px;
+        gap: 10px;
+    }
+    .search-bar-container {
+        width: 100%;
+        max-width: 300px;
+    }
+    .title-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 25px 0;
+    }
+    .fragrance-image-container {
+        max-height: 350px;
+        min-height: 250px;
+        padding: 15px;
+    }
+    .occasions-container {
+        grid-template-columns: repeat(auto-fill, minmax(55px, 1fr));
+        gap: 12px;
+    }
+    .icon-wrapper {
+        width: 50px;
+        height: 50px;
+    }
+    .circular-progress {
+        width: 90px;
+        height: 90px;
+    }
+    .section-separator {
+        margin: 35px 0;
+    }
+    .page-container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar {
+        padding: 10px 10px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .search-bar-container {
+        width: 100%;
+        max-width: 100%;
+        order: 1;
+    }
+    .search-input {
+        height: 42px;
+        font-size: 0.9rem;
+    }
+    .logo {
+        font-size: 30px;
+    }
+    .title-section {
+        padding: 15px 0;
+    }
+    .fragrance-image-container {
+        max-height: 280px;
+        min-height: 200px;
+        border-radius: 15px;
+        padding: 10px;
+    }
+    .main-notes-container {
+        padding: 15px;
+    }
+    .main-notes-container h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    .slider-track {
+        height: 28px;
+    }
+    .note-name {
+        font-size: 0.85rem;
+    }
+    .brand-logo-container {
+        height: 100px;
+        padding: 15px;
+    }
+    .fragrance-main-rating {
+        padding: 12px;
+        gap: 10px;
+    }
+    .rating-score {
+        font-size: 1.5rem;
+    }
+    .rating-stars {
+        font-size: 1.2rem;
+    }
+    .action-bar-section {
+        padding: 15px;
+        border-radius: 12px;
+    }
+    .price-display {
+        font-size: 1.6rem;
+    }
+    .action-btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+    .performance-container {
+        gap: 10px;
+    }
+    .circular-progress {
+        width: 75px;
+        height: 75px;
+    }
+    .performance-label {
+        font-size: 0.8rem;
+    }
+    .description-content {
+        width: 100%;
+    }
+    .intro-paragraph {
+        font-size: 1rem;
+    }
+    .perfumer-details {
+        width: 100%;
+        padding: 15px;
+    }
+    .notes-group h3 {
+        font-size: 1.4rem;
+    }
+    .notes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+        gap: 15px;
+    }
+    .note-image-container {
+        width: 65px;
+        height: 65px;
+    }
+    .note-item-name {
+        font-size: 0.8rem;
+    }
+    .dupes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .section-separator {
+        margin: 25px 0;
+    }
+    .cart-icon-wrapper {
+        margin-left: 10px;
+    }
 }

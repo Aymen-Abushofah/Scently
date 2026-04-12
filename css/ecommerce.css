@@ -454,10 +454,84 @@
     }
 }
 
+/* --- BREAKPOINT: Tablets & large phones (≤768px) --- */
+@media (max-width: 768px) {
+    .ecommerce-nav {
+        margin: 10px;
+        padding: 12px 4%;
+        border-radius: 15px;
+        top: 10px;
+    }
+
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    .cart-container {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .cart-summary {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .cart-summary h2 {
+        font-size: 1.3rem;
+    }
+
+    .checkout-btn {
+        padding: 14px;
+        font-size: 1.05rem;
+    }
+
+    .promo-box {
+        flex-direction: column;
+    }
+
+    .promo-box button {
+        padding: 12px 20px;
+    }
+
+    .checkout-step {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .payment-options {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* --- BREAKPOINT: All phones (≤600px) --- */
 @media (max-width: 600px) {
+    .ecommerce-nav {
+        margin: 8px;
+        padding: 10px 3%;
+        border-radius: 12px;
+        top: 8px;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+    }
+
     .cart-item {
         flex-direction: column;
         align-items: flex-start;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .item-img-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .item-name {
+        font-size: 1rem;
     }
 
     .item-actions {
@@ -475,7 +549,45 @@
         grid-template-columns: 1fr;
     }
 
-    .payment-options {
-        flex-direction: column;
+    .summary-line {
+        font-size: 0.95rem;
+    }
+
+    .total-line {
+        font-size: 1.2rem;
+    }
+
+    .empty-state {
+        padding: 60px 15px;
+    }
+
+    .empty-state h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* --- BREAKPOINT: Very narrow phones (≤400px) --- */
+@media (max-width: 400px) {
+    .ecommerce-nav {
+        margin: 5px;
+        padding: 8px 3%;
+    }
+
+    .page-title {
+        font-size: 1.3rem;
+    }
+
+    .cart-container {
+        margin: 15px auto;
+        padding: 0 10px;
+    }
+
+    .checkout-step {
+        padding: 15px;
+    }
+
+    .input-group input {
+        padding: 12px;
+        font-size: 0.9rem;
     }
 }

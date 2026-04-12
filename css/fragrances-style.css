@@ -440,28 +440,30 @@ body {
 */
 @media (max-width: 768px) {
 
-    /* --- 1. THE FIX: A Professional Full-Width Vertical Header --- */
+    /* --- PHONE FIX: Stack nav on phones and fix search layout --- */
     .top-bar {
         width: 100%;
-        /* Take full width */
         border-radius: 0;
-        /* Remove the rounded corners */
         flex-direction: column;
-        /* Stacks items vertically */
         direction: ltr;
         gap: 15px;
         padding: 15px 20px;
-        /* Adjust padding for the new look */
         margin: 0;
-        /* Reset margin */
         position: sticky;
-        /* Re-enable sticky for a modern feel */
         top: 0;
     }
 
     .logo {
         order: -1;
-        /* Ensures the logo is always on top */
+    }
+
+    .nav-icons {
+        gap: 10px;
+    }
+
+    .section-header {
+        font-size: 24px;
+        margin: 25px 0 15px 0;
     }
 
     /* The wrapper for search and filters */
@@ -498,7 +500,6 @@ body {
 @media (max-width: 482px) {
     #fragrance-display {
         grid-template-columns: 1fr;
-        /* Single column layout */
     }
 
     .logo {
@@ -508,5 +509,33 @@ body {
     .search-bar {
         height: 48px;
         font-size: 14px;
+    }
+
+    .section-header {
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    .fragrance-name {
+        font-size: 18px;
+    }
+
+    .card-overlay {
+        padding: 12px;
+    }
+}
+
+/* Disable hover pop-out on touch devices */
+@media (hover: none) {
+    .fragrance-card:hover .image-container img {
+        transform: none;
+    }
+
+    .fragrance-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .fragrance-card:hover .card-overlay {
+        height: 40%;
     }
 }

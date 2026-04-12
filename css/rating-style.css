@@ -28,7 +28,7 @@ body {
     background-color: var(--dark-blue);
     color: var(--light-blue-2);
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* Floating Particles Background */
@@ -317,32 +317,130 @@ body {
 
 
 /* --- Responsiveness --- */
+@media (max-width: 768px) {
+    .page-container {
+        padding: 25px 15px;
+    }
+
+    .page-header {
+        margin-bottom: 30px;
+    }
+
+    .page-header h1 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+
+    .logo {
+        font-size: 40px;
+    }
+
+    .filter-btn {
+        padding: 8px 18px;
+        font-size: 0.9rem;
+    }
+
+    .leaderboard-item {
+        grid-template-columns: 45px 70px 1fr auto;
+        gap: 15px;
+        padding: 12px 15px;
+    }
+
+    .item-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .rank {
+        font-size: 1.6rem;
+    }
+
+    .item-name {
+        font-size: 1.1rem;
+    }
+
+    .header-nav-container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-icon-item {
+        width: 38px;
+        height: 38px;
+    }
+}
+
 @media (max-width: 576px) {
     .leaderboard-item {
-        grid-template-columns: 40px 60px 1fr auto;
-        /* Smaller rank and image */
-        gap: 15px;
+        grid-template-columns: 35px 55px 1fr auto;
+        gap: 10px;
         padding: 10px;
     }
 
     .rank {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .item-image {
-        width: 60px;
-        height: 60px;
+        width: 55px;
+        height: 55px;
     }
 
     .item-name {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .item-brand {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 
     .item-rating {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    .item-rating .star {
+        font-size: 1rem;
+    }
+
+    .filter-controls {
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    .filter-btn {
+        padding: 7px 14px;
+        font-size: 0.85rem;
+    }
+
+    .page-header p {
+        font-size: 0.95rem;
+    }
+
+    .logo {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 400px) {
+    .leaderboard-item {
+        grid-template-columns: 30px 45px 1fr auto;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .rank {
+        font-size: 1.1rem;
+    }
+
+    .item-image {
+        width: 45px;
+        height: 45px;
+    }
+
+    .item-name {
+        font-size: 0.85rem;
+    }
+
+    .item-rating {
+        font-size: 1rem;
     }
 }

@@ -918,9 +918,7 @@ body {
 @media (max-width: 992px) {
     .cards-grid {
         grid-template-columns: 1fr;
-        /* Switch to a single column on tablets and phones */
         max-width: 450px;
-        /* Limit the width on mobile for better aesthetics */
         margin: 0 auto;
         gap: 30px;
     }
@@ -930,26 +928,98 @@ body {
 @media (max-width: 992px) {
     .footer-grid {
         grid-template-columns: 1fr;
-        /* Stack columns on tablets and phones */
     }
 }
 
-/* --- Responsiveness for the Cards Section --- */
-@media (max-width: 992px) {
-    .cards-grid {
-        grid-template-columns: 1fr;
-        /* Switch to a single column on tablets and phones */
-        max-width: 450px;
-        /* Limit the width on mobile for better aesthetics */
-        margin: 0 auto;
-        gap: 30px;
+/* --- Mobile refinements --- */
+@media (max-width: 768px) {
+    .recommendations-section {
+        padding: 50px 4%;
+    }
+
+    .footer-column {
+        padding: 20px;
+    }
+
+    .about-us h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-us p {
+        font-size: 1rem;
+    }
+
+    .socialContainer {
+        width: 45px;
+        height: 45px;
     }
 }
 
-/* --- Responsiveness for the Footer --- */
-@media (max-width: 992px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-        /* Stack columns on tablets and phones */
+@media (max-width: 480px) {
+    .nav {
+        width: 92%;
+        padding: 0.7rem 1rem;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .recommendations-section {
+        padding: 35px 3%;
+    }
+
+    .cards-header {
+        margin-bottom: 30px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 1.4rem;
+    }
+
+    .card-description {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+    }
+
+    .footer-content {
+        padding: 0 10px 30px 10px;
+    }
+
+    .footer-column {
+        padding: 18px;
+    }
+
+    .footer-column h3 {
+        font-size: 1.2rem;
+        margin-bottom: 18px;
+    }
+
+    .footer-links a,
+    .dev-list p {
+        font-size: 0.95rem;
+    }
+
+    .hero-section {
+        padding: 20px 0;
+        gap: 1.5rem;
+    }
+
+    .search-bar-container {
+        width: 80%;
+    }
+
+    .help-me {
+        font-size: 1.1em;
+    }
+
+    .holo-btn,
+    .nav-buttons button {
+        padding: 0.6rem 1.4rem;
+        font-size: 0.9rem;
     }
 }

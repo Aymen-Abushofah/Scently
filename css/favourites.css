@@ -167,6 +167,21 @@
 }
 
 /* --- Responsive --- */
+@media (max-width: 768px) {
+    .fav-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .fav-header .page-title {
+        font-size: 1.8rem;
+    }
+
+    .fav-card-price {
+        font-size: 1.2rem;
+    }
+}
+
 @media (max-width: 600px) {
     .fav-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -180,5 +195,41 @@
     }
     .fav-card-actions {
         flex-direction: column;
+    }
+
+    .fav-header .page-title {
+        font-size: 1.5rem;
+        gap: 10px;
+    }
+
+    .fav-header .page-title svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .fav-card-name {
+        font-size: 1rem;
+    }
+
+    .fav-card-price {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    .fav-action-btn {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 380px) {
+    .fav-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .fav-card-image {
+        height: 180px;
     }
 }
