@@ -112,6 +112,13 @@ body {
     justify-content: flex-end;
 }
 
+/* nav-buttons layout (desktop) */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 /* Brand logo — decorative font with hover glow */
 .logo {
     font-family: "Great Vibes", cursive;

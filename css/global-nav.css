@@ -101,8 +101,15 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .scently-nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .scently-nav-actions {
         gap: 10px;
+        width: 100%;
+        justify-content: center;
     }
 
     .scently-nav-item {
@@ -132,8 +139,14 @@
 
 /* --- Narrow phones (≤480px) --- */
 @media (max-width: 480px) {
+    .scently-nav-container {
+        gap: 8px;
+    }
+
     .scently-nav-actions {
         gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .scently-nav-item {
