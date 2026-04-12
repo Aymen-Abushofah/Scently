@@ -447,10 +447,13 @@
     .cart-layout {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .cart-items {
         width: 100%;
+        display: flex;
+        flex-direction: column;
         align-items: center;
     }
 
@@ -458,6 +461,7 @@
         width: 100%;
         max-width: 500px;
         position: static;
+        margin: 0 auto;
     }
 }
 
@@ -537,8 +541,9 @@
         width: 100%;
         max-width: 450px;
         margin: 0 auto;
-        padding: 15px;
+        padding: 20px 15px;
         border-radius: 15px;
+        gap: 15px;
     }
 
     .item-img-container {
