@@ -34,7 +34,6 @@ body {
     color: #C1E8FF;
     text-decoration: none;
     transition: color 0.3s, transform 0.3s;
-    margin-right: auto;
     margin-left: 20px;
     z-index: 100;
 }
@@ -123,6 +122,7 @@ body {
     width: 100%; height: 50px; padding: 12px 60px 12px 20px; border-radius: 50px;
     border: 1px solid #5483B3; background: rgba(5, 38, 89, 0.6);
     color: #FFFFFF; font-size: 1rem; font-family: 'Rubik', sans-serif; outline: none; transition: all 0.3s ease;
+    text-align: right; direction: rtl;
 }
 .search-input::placeholder { color: #7DA0CA; opacity: 0.8; }
 .search-input:focus {
@@ -306,7 +306,7 @@ body {
         flex-direction: column;
         gap: 20px;
         padding: 20px;
-        margin: 10px 5% 30px 5%;
+        margin: 10px 0 30px 0;
     }
     .action-buttons {
         width: 100%;
@@ -331,6 +331,7 @@ body {
 
 .fragrance-image-container {
     width: 100%;
+    height: 60vh;
     min-height: 300px;
     max-height: 596px;
     border-radius: 20px;
@@ -343,8 +344,8 @@ body {
 }
 
 .fragrance-image-container img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: contain; /* This remains crucial */
 }
 .fragrance-main-rating {
@@ -816,19 +817,55 @@ body {
 @media (max-width: 768px) {
     .description-section { flex-direction: column; }
     .description-section p, .perfumer-details { width: 100%; }
+    
     .top-bar {
-        padding: 15px 15px;
-        gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: auto auto;
+        direction: ltr; /* Ensure slots map left to right */
+        gap: 15px;
+        padding: 15px 20px;
+        width: 100%;
+    }
+    .logo {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+        margin: 0;
+    }
+    .top-bar > .cart-icon-wrapper[href="favourites.html"] {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: start;
+        align-self: center;
+        margin: 0 !important;
+    }
+    .top-bar > .cart-icon-wrapper[href="cart.html"] {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
+        align-self: center;
+        margin: 0 !important;
     }
     .search-bar-container {
+        grid-column: 1 / -1;
+        grid-row: 2;
         width: 100%;
-        max-width: 300px;
+        max-width: 100%;
+        margin: 0;
     }
     .title-section {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
         padding: 25px 0;
+    }
+    .title-text h1 {
+        font-size: 1.8rem;
+    }
+    .heart-container {
+        width: 42px;
+        height: 42px;
     }
     .fragrance-image-container {
         max-height: 350px;
@@ -858,13 +895,7 @@ body {
 @media (max-width: 480px) {
     .top-bar {
         padding: 10px 10px;
-        flex-wrap: wrap;
         gap: 8px;
-    }
-    .search-bar-container {
-        width: 100%;
-        max-width: 100%;
-        order: 1;
     }
     .search-input {
         height: 42px;
@@ -875,6 +906,13 @@ body {
     }
     .title-section {
         padding: 15px 0;
+    }
+    .title-text h1 {
+        font-size: 1.5rem;
+    }
+    .heart-container {
+        width: 35px;
+        height: 35px;
     }
     .fragrance-image-container {
         max-height: 280px;

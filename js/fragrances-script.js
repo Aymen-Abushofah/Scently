@@ -43,6 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Dynamically inject actual prices into the HTML cards
+    allCards.forEach(card => {
+        const onclickAttr = card.getAttribute('onclick');
+        if (onclickAttr && window.CartManager) {
+            const match = onclickAttr.match(/id=([^']+)/);
+            if (match && match[1]) {
+                const price = window.CartManager.getPrice(match[1]);
+                const priceElement = card.querySelector('.fragrance-price');
+                if (priceElement) {
+                    priceElement.textContent = '$' + price;
+                }
+            }
+        }
+    });
+
     let currentVisibleCategory = 'all'; 
 
 

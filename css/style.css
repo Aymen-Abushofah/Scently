@@ -110,6 +110,7 @@ body {
 /* Right column aligns buttons / hamburger */
 .nav-right {
     justify-content: flex-end;
+    gap: 15px;
 }
 
 /* nav-buttons layout (desktop) */
