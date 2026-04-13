@@ -829,6 +829,10 @@ body {
         /* Make sure it's visible */
     }
 
+    .nav-right {
+        gap: 30px;
+    }
+
     /* Style the mobile dropdown menu */
     .nav-mobile-menu {
         display: flex;

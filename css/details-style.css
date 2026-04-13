@@ -824,7 +824,7 @@ body {
         grid-template-rows: auto auto;
         direction: ltr; /* Ensure slots map left to right */
         gap: 15px;
-        padding: 15px 20px;
+        padding: 15px 30px; /* Pushed icons away from side edges */
         width: 100%;
     }
     .logo {
@@ -894,7 +894,7 @@ body {
 
 @media (max-width: 480px) {
     .top-bar {
-        padding: 10px 10px;
+        padding: 10px 25px; /* Pushed icons further from side edges */
         gap: 8px;
     }
     .search-input {
