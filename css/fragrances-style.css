@@ -521,8 +521,8 @@ body {
 @media (max-width: 482px) {
     #fragrance-display {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 15px;
+        gap: 12px;
+        padding: 10px;
     }
 
     .logo {
@@ -539,17 +539,42 @@ body {
         padding-bottom: 10px;
     }
 
+    /* Phone-friendly card shape */
+    .fragrance-card {
+        aspect-ratio: 3 / 4;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    .image-container {
+        padding: 8px;
+    }
+
+    .image-container img {
+        border-radius: 8px;
+    }
+
+    /* Disable the pop-out hover on small screens */
+    .fragrance-card:hover .image-container img {
+        transform: none;
+    }
+
+    .fragrance-card:hover {
+        transform: translateY(0);
+    }
+
     .fragrance-name {
-        font-size: 14px;
+        font-size: 13px;
         white-space: normal;
-        line-height: 1.2;
-        margin-bottom: 5px;
+        line-height: 1.25;
+        margin-bottom: 4px;
     }
 
     .card-overlay {
-        padding: 10px;
+        padding: 8px;
         height: auto;
-        border-radius: 0 0 10px 10px;
+        border-radius: 0 0 12px 12px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 30%, transparent);
     }
 
     .details-idle {
@@ -568,15 +593,16 @@ body {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        margin-top: 5px;
+        margin-top: 3px;
     }
 
     .fragrance-price {
-        font-size: 13px;
+        font-size: 12px;
+        font-weight: 700;
     }
 
     .fragrance-rating span {
-        font-size: 12px;
+        font-size: 11px;
     }
 }
 
